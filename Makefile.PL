@@ -21,7 +21,7 @@ WriteMakefile(
       'WebService::BorisBikes'               => 0,
       'Data::Dumper'                         => 0,
       'HTML::Entities'                       => 0,
-      'Astro::Constants::MKS'                => 0,
+      'Astro::Constants'                     => 0,
   },
   test      => {TESTS => 't/*.t'}
 );
