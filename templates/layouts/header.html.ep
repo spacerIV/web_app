@@ -1,7 +1,7 @@
         <!-- header logo: style can be found in header.less --> 
 
         <header class="header">
-            <a href="index.html" class="logo" style="font-family: Source Sans Pro"> 
+            <a href="#" class="logo" style="font-family: Source Sans Pro"> 
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 <!-- Web-Apps -->
                 <img src="/img/acme_web_apps.png" style="position: relative; top: 4px;"/>
