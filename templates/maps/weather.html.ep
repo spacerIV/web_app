@@ -1,0 +1,129 @@
+% layout 'dashboard';
+
+% title 'weather';
+
+        <style>
+            #map_canvas {
+                 width: 100%;
+                 height: 540px;
+            }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-xql7D8l5NKfp_xXYIo69ZVBQyDYBGls&libraries=weather&sensor=false"></script>
+        <script type="text/javascript">
+        
+      function ajaxWeather(location){
+          var ajaxRequest;  // The variable that makes Ajax possible!
+          
+          try{
+                  // Opera 8.0+, Firefox, Safari
+                  ajaxRequest = new XMLHttpRequest();
+          } catch (e){
+                  // Internet Explorer Browsers
+                  try{
+                          ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                  } catch (e) {
+                          try{
+                                  ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                          } catch (e){
+                                  // Something went wrong
+                                  alert("Your browser broke!");
+                                  return false;
+                          }
+                  }
+          }
+          // Create a function that will receive data sent from the server
+          ajaxRequest.onreadystatechange = function(){
+                  if(ajaxRequest.readyState == 4){
+                          var gotit = ajaxRequest.responseText;
+                         
+                          //alert(gotit);
+                          var theWeather = JSON.parse(gotit);
+                          displayPopup(theWeather);
+                  }
+          }
+          ajaxRequest.open("GET", "/maps/getweather/" + location, true);
+          ajaxRequest.send(null); 
+      }
+      var infowindow;
+      function displayPopup(theWeather) {
+          var myLatlng = new google.maps.LatLng(theWeather.lat, theWeather.lng);
+
+          var contentString;
+          if (theWeather.success == 1) {
+
+              contentString = '<h4><strong>' + theWeather.weather.place + '</strong></h4>' + 
+                                 'Lat: ' + theWeather.lat + '<br />' + 'Long: ' + theWeather.lng + '<br />' +
+                                 '<img src=' + theWeather.weather.icon  + ' height="60" width="60" >' + '<br />' +
+                                 '<strong>Condition</strong> ' + theWeather.weather.condition + '<br />' +
+                                 '<strong>C</strong>  ' + theWeather.weather.temp_c +  '<br />' +
+                                 '<strong>Wind</strong> ' + theWeather.weather.wind_condition + '<br />' +
+                                 '<strong>Humidity</strong> ' + theWeather.weather.humidity;
+          } 
+          else {
+
+              contentString = '<h4><strong>' + theWeather.weather.place + '</strong></h4>' + 
+                              '<br />' + 
+                              '<br />' + 
+                              '<strong>No weather available here</strong> ';
+
+          } 
+          infowindow = new google.maps.InfoWindow({
+              content: contentString,
+              position: myLatlng
+          });
+          infowindow.open(map);
+      }
+
+      var map;
+      function initialize() {
+          var mapOptions = {
+            center: new google.maps.LatLng(0.0, 0.0),
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+              style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+            },
+            mapTypeId: google.maps.MapTypeId.SATELLITE,
+            panControl: true,
+            scaleControl: true,
+            zoom: 2,
+            zoomControl: true,
+            zoomControlOptions: {
+              style: google.maps.ZoomControlStyle.SMALL
+            } 
+          };
+  
+          map = new google.maps.Map(document.getElementById('map_canvas'),
+                mapOptions);
+
+          // Add weatherLayer --nah its shit
+          //var weatherLayer = new google.maps.weather.WeatherLayer({
+          //    temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+          //});
+          //weatherLayer.setMap(map);
+       
+          // Add cloudLayer 
+          var cloudLayer = new google.maps.weather.CloudLayer();
+          cloudLayer.setMap(map);
+
+          google.maps.event.addListener(map, 'click', function(event) {
+              if (typeof infowindow != 'undefined') infowindow.close();
+              get_weather(event.latLng);
+          });
+      }
+
+      function get_weather(location) {
+          // initiate ajax request
+          ajaxWeather (location);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+        
+        </script>
+
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div id="map_canvas"></div>
+                </div>
+            </div>
+        </div>

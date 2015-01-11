@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+%= include 'layouts/head'
+    </head>
+    <body class="skin-blue">
+%= include 'layouts/header'
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+%= include 'layouts/sidebar'
+            </aside> <!-- sidebar -->
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+%= include 'layouts/navbar'
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+%= include 'layouts/body'
+                    </div>
+                </section><!-- /.content -->
+            </aside>  <!-- navbar, right side column and content of page -->
+%= include 'layouts/footer'
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        <%= $msg %>
+                        <small><%= $blurb %></small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="/"><i class="fa fa-dashboard"></i>home</a></li>
+
+% if ( &url_for =~ /^\/$/ ) { 
+                            <li class="active">dashboard</li>
+% } 
+% if ( &url_for =~ /maps/ ) { 
+                        <li><a href="#">maps</a></li>
+% } 
+% if ( &url_for =~ /maps\/weather/ ) { 
+                        <li><a href="#">weather</a></li>
+% }
+% if ( &url_for =~ /maps\/borisbikes/ ) { 
+                        <li><a href="#">borisbikes</a></li>
+% }
+% if ( &url_for =~ /misc/ ) { 
+                        <li><a href="#">misc</a></li>
+% } 
+% if ( &url_for =~ /misc\/schwarzschild/ ) { 
+                        <li><a href="#">schwarzschild</a></li>
+% }
+% if ( &url_for =~ /misc\/tetris/ ) { 
+                        <li><a href="#">tetris</a></li>
+% }
+                    </ol>
+                </section>

@@ -1,0 +1,39 @@
+package WebApp::Misc;
+
+use Mojo::Base 'Mojolicious::Controller';
+
+use Data::Dumper;
+
+use Mojo::Log;
+use HTML::Entities;
+use Astro::Constants::MKS qw(:long);
+
+sub schwarzschild {
+    my $self = shift;
+
+    $self->render( title => 'Schwarzschild Radius', 
+                   msg   => 'Schwarzschild Radius', 
+                   blurb => '' ),
+}
+
+sub calculate_schwarzschild_radius {
+    my $self = shift;
+
+    my $mass = encode_entities $self->param( 'mass' );
+ 
+    my $answer = 2 * GRAVITATIONAL * $mass / LIGHT_SPEED ** 2;
+
+    $answer =~ s/e-(\d+)$/ x 10 <sup>-$1<\/sup>/; 
+
+    $self->render( json => { schwarzschild_radius => $answer } );
+}
+
+sub tetris {
+    my $self = shift;
+
+    $self->render( title => 'WebGL Tetris', 
+                   msg   => 'WebGL Tetris', 
+                   blurb => 'Ported from a C, OpenGL App to Javascript using Emscripten' ),
+}
+
+1;

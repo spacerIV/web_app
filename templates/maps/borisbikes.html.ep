@@ -1,0 +1,143 @@
+% layout 'dashboard';
+
+% title 'boris bikes';
+
+        <style>
+            #map_canvas {
+                 width: 100%;
+                 height: 540px;
+            }
+        </style>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-xql7D8l5NKfp_xXYIo69ZVBQyDYBGls&sensor=falsejs&v=3.exp"></script>
+        <script type="text/javascript">
+        
+      var map;
+      var stations = [];
+      var infowindow = new google.maps.InfoWindow();
+
+      var stations = [ 
+          % my $x=0;
+          % foreach my $station_id (keys $stations) {
+             [ 
+                <%= $station_id %>,
+                <%= $stations->{$station_id}->{lat}  %> , 
+                <%= $stations->{$station_id}->{long} %> , 
+                '<%= $stations->{$station_id}->{name} %>' ,
+                <%= $stations->{$station_id}->{icon_colour} %> ,
+             ],
+          % }
+      ];
+      
+
+      function initialize() {
+          // Map options
+          var mapOptions = {
+            zoom: 12,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+              style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+            },
+            center: new google.maps.LatLng(51.51, -0.12),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            streetViewControl: true,
+            panControl: true,
+            scaleControl: true,
+            zoomControl: true,
+            zoomControlOptions: {
+              style: google.maps.ZoomControlStyle.SMALL
+            } 
+          };
+ 
+          // Create the map 
+          map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+          // Add bike layer
+          var bikeLayer = new google.maps.BicyclingLayer();
+
+          bikeLayer.setMap(map);
+
+          // Place stations as markers on the map
+          for (var i = 0; i < stations.length; i++) {
+
+              var station = stations[i];
+
+              var myLatLng = new google.maps.LatLng(station[1], station[2]);
+
+              var mytitle = station[3] + ' icon: ' + station[4];
+
+              var iconShape = {
+                    coord: [9,0,6,1,4,2,2,4,0,8,0,12,1,14,2,16,5,19,7,23,8,26,9,30,9,34,11,34,11,30,12,26,13,24,14,21,16,18,18,16,20,12,20,8,18,4,16,2,15,1,13,0],
+                    type: 'poly'
+              };
+
+              var icon_colour = 'blue';
+
+              switch (station[4]) {
+                 case 1: 
+                      icon_colour = 'red';
+                      break;
+                 case 2: 
+                      icon_colour = 'yellow';
+                      break;
+                 case 3: 
+                      icon_colour = 'green';
+                      break;
+              } 
+
+              var icon = new google.maps.MarkerImage("/img/maps/borisbikes/marker_" + icon_colour + ".png",
+                     // This marker is 20 pixels wide by 34 pixels tall.
+                     new google.maps.Size(20, 34),
+                     // The origin for this image is 0,0.
+                     new google.maps.Point(0,0),
+                     // The anchor for this image is at 6,20.
+                     new google.maps.Point(9, 34));
+
+              var marker = new google.maps.Marker({
+                   position: myLatLng,
+                   map: map,
+                   icon: icon,
+                   shape: iconShape,
+                   title: mytitle 
+               });
+
+               marker_popup_event(marker, station[0]), myLatLng;
+          }
+      }
+
+      function marker_popup_event(marker, station_id, myLatLng) {
+          google.maps.event.addListener(marker, 'click', function() {
+
+               var url = "/maps/get_bb_station_info/" + station_id;
+
+               $.getJSON(url, function(data) {
+
+                   var content = '<h4>' + data.station_info.name + '</h4>' +
+                                 '<hr width="90%">' +
+                                 '<div style="float:left; width:50%; padding:10px">' +
+                                     '<img src="/img/maps/borisbikes/bluebike.png">' +
+                                 '</div>' +
+                                 '<div style="float:left; width:50%; padding:20px">' + '<p>' +
+                                     '<b>Bikes: </b>' + data.station_info.nbBikes + '<p>' +
+                                     '<b>Docks: </b>' + data.station_info.nbDocks + '<p>' +
+                                     '<b>Latitude: </b>' + data.station_info.lat + '<p>' +
+                                     '<b>Longitude: </b>' + data.station_info.long + '<p>' +
+                                 '</div>';
+    
+                       infowindow.setContent( content );
+                       infowindow.open( map, marker );
+               });
+          });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+        
+        </script>
+
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div id="map_canvas"></div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,128 @@
+% layout 'dashboard';
+
+% title 'Your Schwarzschild Radius';
+
+<script>
+    $(document).ready(function(){
+
+        $("#submit_radius").click(function(){
+
+            var mass = $('#mass').val(); 
+
+            console.log( mass );
+
+            var url = "/misc/calculate_schwarzschild_radius/" + mass;
+
+            console.log( url );
+
+            $.getJSON(url, function(data) {
+
+                var content = data.schwarzschild_radius;
+
+                $('#ajax').fadeOut( function(){
+
+
+                    var div = $('<div id="ajax" class="col-md-12">' +
+                                '    <div class="box box-solid bg-green">' + 
+                                '        <div class="box-header">' + 
+                                '            <h3 class="box-title">Answer</h3>' + 
+                                '        </div> ' +
+                                '        <div class="box-body">' + 
+                                '            <div style="text-align:center"> ' +
+                                '                <h1> ' + content + ' meters</h1> ' +
+                                '            </div>' + 
+                                '        </div>' + 
+                                '    </div>' + 
+                                '</div>' ).hide();
+
+                    $('#ajax').replaceWith( div );
+                    $('#ajax').fadeIn( 'slow' );
+                });
+            });
+        });
+    });
+</script>
+
+<div class="col-md-8">
+    <div class="box box-primary">
+
+        <div class="box-header">
+            <h3 class="box-title">Have you ever wanted to be a black hole?</h3>
+        </div>
+
+        <div class="box-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter your mass in kilograms</label>
+                <input type="text" class="form-control" id="mass" placeholder="Eg: 75">
+            </div>
+        </div>
+
+        <div class="box-footer">
+            <p><button type="submit" class="btn btn-primary" id="submit_radius">Submit</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="box box-info">
+        <div class="box-header">
+            <h3 class="box-title">Or try these...</h3>
+        </div>
+        <div class="box-body no-padding">
+            <table class="table">
+                <tr>
+                    <td>Moon</td>
+                    <td><img src="/img/misc/moon_symbol.png"></td>
+                    <td>73477000000000000000000</td>
+                </tr>
+                    <td>Earth</td>
+                    <td><img src="/img/misc/earth_symbol.png"></td>
+                    <td>5972190000000000000000000</td>
+                </tr>
+                <tr>
+                    <td>Jupiter</td>
+                    <td><img src="/img/misc/jupiter_symbol.png"></td>
+                    <td>1898600000000000000000000000</td>
+                </tr>
+                <tr>
+                    <td>Sun</td>
+                    <td><img src="/img/misc/sun_symbol.png"></td>
+                    <td>1988550000000000000000000000000</td>
+                <tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="ajax"></div>
+
+<div class="col-md-6">
+    <div class="box box-primary">
+        <div class="box-header">
+            <h3 class="box-title">Wiki</h3>
+        </div>
+        <div class="box-body">
+<p>The <a href="http://en.wikipedia.org/wiki/Schwarzschild_radius">Schwarzschild radius</a> (sometimes historically referred to as the gravitational radius) is the radius of a sphere such that, if all the mass of an object were to be compressed within that sphere, the escape speed from the surface of the sphere would equal the speed of light.</p>
+<p> An example of an object smaller than its Schwarzschild radius is a <a href="http://en.wikipedia.org/wiki/Black_hole">black hole</a>. Once a stellar remnant collapses below this radius, light cannot escape and the object is no longer directly visible. It is a characteristic radius associated with every quantity of mass. </p>
+<p>The Schwarzschild radius was named after the German astronomer Karl Schwarzschild who calculated this exact solution for the theory of general relativity in 1916.</p>
+<br>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="box box-primary">
+        <div class="box-header">
+            <h3 class="box-title">Formula</h3>
+        </div>
+        <div class="box-body">
+<p>The Schwarzschild radius is proportional to the mass with a proportionality constant involving the gravitational constant and the speed of light:</p>
+<p><img src="/img/misc/SchwarszchildRadius.png"></p>
+<p>       r<sub>s</sub> is the Schwarzschild radius.</p>
+<p>       G is the gravitational constant.</p>
+<p>       m is the mass of the object.</p>
+<p>       c is the speed of light in vacuum.</p>
+        </div>
+    </div>
+</div>

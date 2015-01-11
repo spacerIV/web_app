@@ -1,0 +1,30 @@
+% layout 'dashboard';
+
+% title 'WebGL Tetris';
+
+<div class="col-md-12">
+    <div class="box box-primary">
+
+        <div class="box-header">
+            <h3 class="box-title">WebGL Tetris!</h3>
+        </div>
+
+        <div class="box-body">
+            <div class="form-group">
+                <canvas id="canvas" width="800" height="600" />
+    
+                <script type="text/javascript">
+            
+                    var Module = {};
+                    Module.canvas = document.getElementById('canvas');
+                
+                 </script>
+                
+                 <script type="text/javascript" src="/js/misc/tetris.js"></script>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
