@@ -2002,12 +2002,6 @@ function copyTempDouble(ptr) {
       GLImmediate.addRendererComponent(GLImmediate.VERTEX, 3, GLctx.FLOAT);
     }
 
-  function _glPopMatrix() {
-      GLImmediate.matricesModified = true;
-      GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
-      GLImmediate.matrix[GLImmediate.currentMatrix] = GLImmediate.matrixStack[GLImmediate.currentMatrix].pop();
-    }
-
   function _glClearColor(x0, x1, x2, x3) { GLctx.clearColor(x0, x1, x2, x3) }
 
   function _glDisable(x0) { GLctx.disable(x0) }
@@ -2020,6 +2014,12 @@ function copyTempDouble(ptr) {
 
    
   Module["_memset"] = _memset;
+
+  function _glPopMatrix() {
+      GLImmediate.matricesModified = true;
+      GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
+      GLImmediate.matrix[GLImmediate.currentMatrix] = GLImmediate.matrixStack[GLImmediate.currentMatrix].pop();
+    }
 
   
   var GLUT={initTime:null,idleFunc:null,displayFunc:null,keyboardFunc:null,keyboardUpFunc:null,specialFunc:null,specialUpFunc:null,reshapeFunc:null,motionFunc:null,passiveMotionFunc:null,mouseFunc:null,buttons:0,modifiers:0,initWindowWidth:256,initWindowHeight:256,initDisplayMode:18,windowX:0,windowY:0,windowWidth:0,windowHeight:0,requestedAnimationFrame:false,saveModifiers:function (event) {
@@ -6040,104 +6040,6 @@ function copyTempDouble(ptr) {
   function _glLineWidth(x0) { GLctx.lineWidth(x0) }
 
   
-  function __exit(status) {
-      // void _exit(int status);
-      // http://pubs.opengroup.org/onlinepubs/000095399/functions/exit.html
-      Module['exit'](status);
-    }function _exit(status) {
-      __exit(status);
-    }
-
-  function _glutSetCursor(cursor) {
-      var cursorStyle = 'auto';
-      switch(cursor) {
-        case 0x0000: /* GLUT_CURSOR_RIGHT_ARROW */
-          // No equivalent css cursor style, fallback to 'auto'
-          break;
-        case 0x0001: /* GLUT_CURSOR_LEFT_ARROW */
-          // No equivalent css cursor style, fallback to 'auto'
-          break;
-        case 0x0002: /* GLUT_CURSOR_INFO */
-          cursorStyle = 'pointer';
-          break;
-        case 0x0003: /* GLUT_CURSOR_DESTROY */
-          // No equivalent css cursor style, fallback to 'auto'
-          break;
-        case 0x0004: /* GLUT_CURSOR_HELP */
-          cursorStyle = 'help';
-          break;
-        case 0x0005: /* GLUT_CURSOR_CYCLE */
-          // No equivalent css cursor style, fallback to 'auto'
-          break;
-        case 0x0006: /* GLUT_CURSOR_SPRAY */
-          // No equivalent css cursor style, fallback to 'auto'
-          break;
-        case 0x0007: /* GLUT_CURSOR_WAIT */
-          cursorStyle = 'wait';
-          break;
-        case 0x0008: /* GLUT_CURSOR_TEXT */
-          cursorStyle = 'text';
-          break;
-        case 0x0009: /* GLUT_CURSOR_CROSSHAIR */
-        case 0x0066: /* GLUT_CURSOR_FULL_CROSSHAIR */
-          cursorStyle = 'crosshair';
-          break;
-        case 0x000A: /* GLUT_CURSOR_UP_DOWN */
-          cursorStyle = 'ns-resize';
-          break;
-        case 0x000B: /* GLUT_CURSOR_LEFT_RIGHT */
-          cursorStyle = 'ew-resize';
-          break;
-        case 0x000C: /* GLUT_CURSOR_TOP_SIDE */
-          cursorStyle = 'n-resize';
-          break;
-        case 0x000D: /* GLUT_CURSOR_BOTTOM_SIDE */
-          cursorStyle = 's-resize';
-          break;
-        case 0x000E: /* GLUT_CURSOR_LEFT_SIDE */
-          cursorStyle = 'w-resize';
-          break;
-        case 0x000F: /* GLUT_CURSOR_RIGHT_SIDE */
-          cursorStyle = 'e-resize';
-          break;
-        case 0x0010: /* GLUT_CURSOR_TOP_LEFT_CORNER */
-          cursorStyle = 'nw-resize';
-          break;
-        case 0x0011: /* GLUT_CURSOR_TOP_RIGHT_CORNER */
-          cursorStyle = 'ne-resize';
-          break;
-        case 0x0012: /* GLUT_CURSOR_BOTTOM_RIGHT_CORNER */
-          cursorStyle = 'se-resize';
-          break;
-        case 0x0013: /* GLUT_CURSOR_BOTTOM_LEFT_CORNER */
-          cursorStyle = 'sw-resize';
-          break;
-        case 0x0064: /* GLUT_CURSOR_INHERIT */
-          break;
-        case 0x0065: /* GLUT_CURSOR_NONE */
-          cursorStyle = 'none';
-          break;
-        default:
-          throw "glutSetCursor: Unknown cursor type: " + cursor;
-      }
-      Module['canvas'].style.cursor = cursorStyle;
-    }
-
-  function _gluPerspective(fov, aspect, near, far) {
-      GLImmediate.matricesModified = true;
-      GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
-      GLImmediate.matrix[GLImmediate.currentMatrix] =
-        GLImmediate.matrixLib.mat4.perspective(fov, aspect, near, far,
-                                                 GLImmediate.matrix[GLImmediate.currentMatrix]);
-    }
-
-  function _glRotatef(angle, x, y, z) {
-      GLImmediate.matricesModified = true;
-      GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
-      GLImmediate.matrixLib.mat4.rotate(GLImmediate.matrix[GLImmediate.currentMatrix], angle*Math.PI/180, [x, y, z]);
-    }
-
-  
   
   function _emscripten_set_main_loop_timing(mode, value) {
       Browser.mainLoop.timingMode = mode;
@@ -6829,291 +6731,94 @@ function copyTempDouble(ptr) {
         return handle;
       }};
 
-  function _glEnd() {
-      GLImmediate.prepareClientAttributes(GLImmediate.rendererComponents[GLImmediate.VERTEX], true);
-      GLImmediate.firstVertex = 0;
-      GLImmediate.lastVertex = GLImmediate.vertexCounter / (GLImmediate.stride >> 2);
-      GLImmediate.flush();
-      GLImmediate.disableBeginEndClientAttributes();
-      GLImmediate.mode = -1;
-  
-      // Pop the old state:
-      GLImmediate.enabledClientAttributes = GLImmediate.enabledClientAttributes_preBegin;
-      GLImmediate.clientAttributes = GLImmediate.clientAttributes_preBegin;
-      GLImmediate.currentRenderer = null; // The set of active client attributes changed, we must re-lookup the renderer to use.
-      GLImmediate.modifiedClientAttributes = true;
-    }
-
-  function _glutInitWindowSize(width, height) {
-      Browser.setCanvasSize( GLUT.initWindowWidth = width,
-                             GLUT.initWindowHeight = height );
-    }
-
-  function _sysconf(name) {
-      // long sysconf(int name);
-      // http://pubs.opengroup.org/onlinepubs/009695399/functions/sysconf.html
-      switch(name) {
-        case 30: return PAGE_SIZE;
-        case 132:
-        case 133:
-        case 12:
-        case 137:
-        case 138:
-        case 15:
-        case 235:
-        case 16:
-        case 17:
-        case 18:
-        case 19:
-        case 20:
-        case 149:
-        case 13:
-        case 10:
-        case 236:
-        case 153:
-        case 9:
-        case 21:
-        case 22:
-        case 159:
-        case 154:
-        case 14:
-        case 77:
-        case 78:
-        case 139:
-        case 80:
-        case 81:
-        case 79:
-        case 82:
-        case 68:
-        case 67:
-        case 164:
-        case 11:
-        case 29:
-        case 47:
-        case 48:
-        case 95:
-        case 52:
-        case 51:
-        case 46:
-          return 200809;
-        case 27:
-        case 246:
-        case 127:
-        case 128:
-        case 23:
-        case 24:
-        case 160:
-        case 161:
-        case 181:
-        case 182:
-        case 242:
-        case 183:
-        case 184:
-        case 243:
-        case 244:
-        case 245:
-        case 165:
-        case 178:
-        case 179:
-        case 49:
-        case 50:
-        case 168:
-        case 169:
-        case 175:
-        case 170:
-        case 171:
-        case 172:
-        case 97:
-        case 76:
-        case 32:
-        case 173:
-        case 35:
-          return -1;
-        case 176:
-        case 177:
-        case 7:
-        case 155:
-        case 8:
-        case 157:
-        case 125:
-        case 126:
-        case 92:
-        case 93:
-        case 129:
-        case 130:
-        case 131:
-        case 94:
-        case 91:
-          return 1;
-        case 74:
-        case 60:
-        case 69:
-        case 70:
-        case 4:
-          return 1024;
-        case 31:
-        case 42:
-        case 72:
-          return 32;
-        case 87:
-        case 26:
-        case 33:
-          return 2147483647;
-        case 34:
-        case 1:
-          return 47839;
-        case 38:
-        case 36:
-          return 99;
-        case 43:
-        case 37:
-          return 2048;
-        case 0: return 2097152;
-        case 3: return 65536;
-        case 28: return 32768;
-        case 44: return 32767;
-        case 75: return 16384;
-        case 39: return 1000;
-        case 89: return 700;
-        case 71: return 256;
-        case 40: return 255;
-        case 2: return 100;
-        case 180: return 64;
-        case 25: return 20;
-        case 5: return 16;
-        case 6: return 6;
-        case 73: return 4;
-        case 84: {
-          if (typeof navigator === 'object') return navigator['hardwareConcurrency'] || 1;
-          return 1;
-        }
+  function _glutSetCursor(cursor) {
+      var cursorStyle = 'auto';
+      switch(cursor) {
+        case 0x0000: /* GLUT_CURSOR_RIGHT_ARROW */
+          // No equivalent css cursor style, fallback to 'auto'
+          break;
+        case 0x0001: /* GLUT_CURSOR_LEFT_ARROW */
+          // No equivalent css cursor style, fallback to 'auto'
+          break;
+        case 0x0002: /* GLUT_CURSOR_INFO */
+          cursorStyle = 'pointer';
+          break;
+        case 0x0003: /* GLUT_CURSOR_DESTROY */
+          // No equivalent css cursor style, fallback to 'auto'
+          break;
+        case 0x0004: /* GLUT_CURSOR_HELP */
+          cursorStyle = 'help';
+          break;
+        case 0x0005: /* GLUT_CURSOR_CYCLE */
+          // No equivalent css cursor style, fallback to 'auto'
+          break;
+        case 0x0006: /* GLUT_CURSOR_SPRAY */
+          // No equivalent css cursor style, fallback to 'auto'
+          break;
+        case 0x0007: /* GLUT_CURSOR_WAIT */
+          cursorStyle = 'wait';
+          break;
+        case 0x0008: /* GLUT_CURSOR_TEXT */
+          cursorStyle = 'text';
+          break;
+        case 0x0009: /* GLUT_CURSOR_CROSSHAIR */
+        case 0x0066: /* GLUT_CURSOR_FULL_CROSSHAIR */
+          cursorStyle = 'crosshair';
+          break;
+        case 0x000A: /* GLUT_CURSOR_UP_DOWN */
+          cursorStyle = 'ns-resize';
+          break;
+        case 0x000B: /* GLUT_CURSOR_LEFT_RIGHT */
+          cursorStyle = 'ew-resize';
+          break;
+        case 0x000C: /* GLUT_CURSOR_TOP_SIDE */
+          cursorStyle = 'n-resize';
+          break;
+        case 0x000D: /* GLUT_CURSOR_BOTTOM_SIDE */
+          cursorStyle = 's-resize';
+          break;
+        case 0x000E: /* GLUT_CURSOR_LEFT_SIDE */
+          cursorStyle = 'w-resize';
+          break;
+        case 0x000F: /* GLUT_CURSOR_RIGHT_SIDE */
+          cursorStyle = 'e-resize';
+          break;
+        case 0x0010: /* GLUT_CURSOR_TOP_LEFT_CORNER */
+          cursorStyle = 'nw-resize';
+          break;
+        case 0x0011: /* GLUT_CURSOR_TOP_RIGHT_CORNER */
+          cursorStyle = 'ne-resize';
+          break;
+        case 0x0012: /* GLUT_CURSOR_BOTTOM_RIGHT_CORNER */
+          cursorStyle = 'se-resize';
+          break;
+        case 0x0013: /* GLUT_CURSOR_BOTTOM_LEFT_CORNER */
+          cursorStyle = 'sw-resize';
+          break;
+        case 0x0064: /* GLUT_CURSOR_INHERIT */
+          break;
+        case 0x0065: /* GLUT_CURSOR_NONE */
+          cursorStyle = 'none';
+          break;
+        default:
+          throw "glutSetCursor: Unknown cursor type: " + cursor;
       }
-      ___setErrNo(ERRNO_CODES.EINVAL);
-      return -1;
+      Module['canvas'].style.cursor = cursorStyle;
     }
 
-   
-  Module["_bitshift64Lshr"] = _bitshift64Lshr;
-
-  
-  function _emscripten_glColor4f(r, g, b, a) {
-      r = Math.max(Math.min(r, 1), 0);
-      g = Math.max(Math.min(g, 1), 0);
-      b = Math.max(Math.min(b, 1), 0);
-      a = Math.max(Math.min(a, 1), 0);
-  
-      // TODO: make ub the default, not f, save a few mathops
-      if (GLImmediate.mode >= 0) {
-        var start = GLImmediate.vertexCounter << 2;
-        GLImmediate.vertexDataU8[start + 0] = r * 255;
-        GLImmediate.vertexDataU8[start + 1] = g * 255;
-        GLImmediate.vertexDataU8[start + 2] = b * 255;
-        GLImmediate.vertexDataU8[start + 3] = a * 255;
-        GLImmediate.vertexCounter++;
-        GLImmediate.addRendererComponent(GLImmediate.COLOR, 4, GLctx.UNSIGNED_BYTE);
-      } else {
-        GLImmediate.clientColor[0] = r;
-        GLImmediate.clientColor[1] = g;
-        GLImmediate.clientColor[2] = b;
-        GLImmediate.clientColor[3] = a;
-        GLctx.vertexAttrib4fv(GLImmediate.COLOR, GLImmediate.clientColor);
-      }
-    }function _glColor3f(r, g, b) {
-      _emscripten_glColor4f(r, g, b, 1);
+  function _gluPerspective(fov, aspect, near, far) {
+      GLImmediate.matricesModified = true;
+      GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
+      GLImmediate.matrix[GLImmediate.currentMatrix] =
+        GLImmediate.matrixLib.mat4.perspective(fov, aspect, near, far,
+                                                 GLImmediate.matrix[GLImmediate.currentMatrix]);
     }
 
-  function _glutSpecialFunc(func) {
-      GLUT.specialFunc = func;
+  function _glRotatef(angle, x, y, z) {
+      GLImmediate.matricesModified = true;
+      GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
+      GLImmediate.matrixLib.mat4.rotate(GLImmediate.matrix[GLImmediate.currentMatrix], angle*Math.PI/180, [x, y, z]);
     }
-
-  function _glVertex3f(x, y, z) {
-      assert(GLImmediate.mode >= 0); // must be in begin/end
-      GLImmediate.vertexData[GLImmediate.vertexCounter++] = x;
-      GLImmediate.vertexData[GLImmediate.vertexCounter++] = y;
-      GLImmediate.vertexData[GLImmediate.vertexCounter++] = z || 0;
-      assert(GLImmediate.vertexCounter << 2 < GL.MAX_TEMP_BUFFER_SIZE);
-      GLImmediate.addRendererComponent(GLImmediate.VERTEX, 3, GLctx.FLOAT);
-    }
-
-  function _glutSpecialUpFunc(func) {
-      GLUT.specialUpFunc = func;
-    }
-
-  function _glutInit(argcp, argv) {
-      // Ignore arguments
-      GLUT.initTime = Date.now();
-  
-      var isTouchDevice = 'ontouchstart' in document.documentElement;
-  
-      window.addEventListener("keydown", GLUT.onKeydown, true);
-      window.addEventListener("keyup", GLUT.onKeyup, true);
-      if (isTouchDevice) {
-        window.addEventListener("touchmove", GLUT.onMousemove, true);
-        window.addEventListener("touchstart", GLUT.onMouseButtonDown, true);
-        window.addEventListener("touchend", GLUT.onMouseButtonUp, true);
-      } else {
-        window.addEventListener("mousemove", GLUT.onMousemove, true);
-        window.addEventListener("mousedown", GLUT.onMouseButtonDown, true);
-        window.addEventListener("mouseup", GLUT.onMouseButtonUp, true);
-        // IE9, Chrome, Safari, Opera
-        window.addEventListener("mousewheel", GLUT.onMouseWheel, true);
-        // Firefox
-        window.addEventListener("DOMMouseScroll", GLUT.onMouseWheel, true);
-      }
-  
-      Browser.resizeListeners.push(function(width, height) {
-        if (GLUT.reshapeFunc) {
-        	Runtime.dynCall('vii', GLUT.reshapeFunc, [width, height]);
-        }
-      });
-  
-      __ATEXIT__.push({ func: function() {
-        window.removeEventListener("keydown", GLUT.onKeydown, true);
-        window.removeEventListener("keyup", GLUT.onKeyup, true);
-        if (isTouchDevice) {
-          window.removeEventListener("touchmove", GLUT.onMousemove, true);
-          window.removeEventListener("touchstart", GLUT.onMouseButtonDown, true);
-          window.removeEventListener("touchend", GLUT.onMouseButtonUp, true);
-        } else {
-          window.removeEventListener("mousemove", GLUT.onMousemove, true);
-          window.removeEventListener("mousedown", GLUT.onMouseButtonDown, true);
-          window.removeEventListener("mouseup", GLUT.onMouseButtonUp, true);
-          // IE9, Chrome, Safari, Opera
-          window.removeEventListener("mousewheel", GLUT.onMouseWheel, true);
-          // Firefox
-          window.removeEventListener("DOMMouseScroll", GLUT.onMouseWheel, true);
-        }
-        Module["canvas"].width = Module["canvas"].height = 1;
-      } });
-    }
-
-  
-  function _glutReshapeWindow(width, height) {
-      GLUT.cancelFullScreen();
-      Browser.setCanvasSize(width, height);
-      if (GLUT.reshapeFunc) {
-        Runtime.dynCall('vii', GLUT.reshapeFunc, [width, height]);
-      }
-      _glutPostRedisplay();
-    }function _glutMainLoop() {
-      _glutReshapeWindow(Module['canvas'].width, Module['canvas'].height);
-      _glutPostRedisplay();
-      throw 'SimulateInfiniteLoop';
-    }
-
-  function _glGetError() {
-      // First return any GL error generated by the emscripten library_gl.js interop layer.
-      if (GL.lastError) {
-        var error = GL.lastError;
-        GL.lastError = 0/*GL_NO_ERROR*/;
-        return error;
-      } else { // If there were none, return the GL error from the browser GL context.
-        return GLctx.getError();
-      }
-    }
-
-   
-  Module["_i64Add"] = _i64Add;
 
   
   
@@ -11503,6 +11208,301 @@ function copyTempDouble(ptr) {
       GLImmediate.matrixLib.mat4.identity(GLImmediate.matrix[GLImmediate.currentMatrix]);
     }
 
+  function _glEnd() {
+      GLImmediate.prepareClientAttributes(GLImmediate.rendererComponents[GLImmediate.VERTEX], true);
+      GLImmediate.firstVertex = 0;
+      GLImmediate.lastVertex = GLImmediate.vertexCounter / (GLImmediate.stride >> 2);
+      GLImmediate.flush();
+      GLImmediate.disableBeginEndClientAttributes();
+      GLImmediate.mode = -1;
+  
+      // Pop the old state:
+      GLImmediate.enabledClientAttributes = GLImmediate.enabledClientAttributes_preBegin;
+      GLImmediate.clientAttributes = GLImmediate.clientAttributes_preBegin;
+      GLImmediate.currentRenderer = null; // The set of active client attributes changed, we must re-lookup the renderer to use.
+      GLImmediate.modifiedClientAttributes = true;
+    }
+
+  function _glutInitWindowSize(width, height) {
+      Browser.setCanvasSize( GLUT.initWindowWidth = width,
+                             GLUT.initWindowHeight = height );
+    }
+
+  function _sysconf(name) {
+      // long sysconf(int name);
+      // http://pubs.opengroup.org/onlinepubs/009695399/functions/sysconf.html
+      switch(name) {
+        case 30: return PAGE_SIZE;
+        case 132:
+        case 133:
+        case 12:
+        case 137:
+        case 138:
+        case 15:
+        case 235:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+        case 149:
+        case 13:
+        case 10:
+        case 236:
+        case 153:
+        case 9:
+        case 21:
+        case 22:
+        case 159:
+        case 154:
+        case 14:
+        case 77:
+        case 78:
+        case 139:
+        case 80:
+        case 81:
+        case 79:
+        case 82:
+        case 68:
+        case 67:
+        case 164:
+        case 11:
+        case 29:
+        case 47:
+        case 48:
+        case 95:
+        case 52:
+        case 51:
+        case 46:
+          return 200809;
+        case 27:
+        case 246:
+        case 127:
+        case 128:
+        case 23:
+        case 24:
+        case 160:
+        case 161:
+        case 181:
+        case 182:
+        case 242:
+        case 183:
+        case 184:
+        case 243:
+        case 244:
+        case 245:
+        case 165:
+        case 178:
+        case 179:
+        case 49:
+        case 50:
+        case 168:
+        case 169:
+        case 175:
+        case 170:
+        case 171:
+        case 172:
+        case 97:
+        case 76:
+        case 32:
+        case 173:
+        case 35:
+          return -1;
+        case 176:
+        case 177:
+        case 7:
+        case 155:
+        case 8:
+        case 157:
+        case 125:
+        case 126:
+        case 92:
+        case 93:
+        case 129:
+        case 130:
+        case 131:
+        case 94:
+        case 91:
+          return 1;
+        case 74:
+        case 60:
+        case 69:
+        case 70:
+        case 4:
+          return 1024;
+        case 31:
+        case 42:
+        case 72:
+          return 32;
+        case 87:
+        case 26:
+        case 33:
+          return 2147483647;
+        case 34:
+        case 1:
+          return 47839;
+        case 38:
+        case 36:
+          return 99;
+        case 43:
+        case 37:
+          return 2048;
+        case 0: return 2097152;
+        case 3: return 65536;
+        case 28: return 32768;
+        case 44: return 32767;
+        case 75: return 16384;
+        case 39: return 1000;
+        case 89: return 700;
+        case 71: return 256;
+        case 40: return 255;
+        case 2: return 100;
+        case 180: return 64;
+        case 25: return 20;
+        case 5: return 16;
+        case 6: return 6;
+        case 73: return 4;
+        case 84: {
+          if (typeof navigator === 'object') return navigator['hardwareConcurrency'] || 1;
+          return 1;
+        }
+      }
+      ___setErrNo(ERRNO_CODES.EINVAL);
+      return -1;
+    }
+
+   
+  Module["_bitshift64Lshr"] = _bitshift64Lshr;
+
+  
+  function __exit(status) {
+      // void _exit(int status);
+      // http://pubs.opengroup.org/onlinepubs/000095399/functions/exit.html
+      Module['exit'](status);
+    }function _exit(status) {
+      __exit(status);
+    }
+
+  
+  function _emscripten_glColor4f(r, g, b, a) {
+      r = Math.max(Math.min(r, 1), 0);
+      g = Math.max(Math.min(g, 1), 0);
+      b = Math.max(Math.min(b, 1), 0);
+      a = Math.max(Math.min(a, 1), 0);
+  
+      // TODO: make ub the default, not f, save a few mathops
+      if (GLImmediate.mode >= 0) {
+        var start = GLImmediate.vertexCounter << 2;
+        GLImmediate.vertexDataU8[start + 0] = r * 255;
+        GLImmediate.vertexDataU8[start + 1] = g * 255;
+        GLImmediate.vertexDataU8[start + 2] = b * 255;
+        GLImmediate.vertexDataU8[start + 3] = a * 255;
+        GLImmediate.vertexCounter++;
+        GLImmediate.addRendererComponent(GLImmediate.COLOR, 4, GLctx.UNSIGNED_BYTE);
+      } else {
+        GLImmediate.clientColor[0] = r;
+        GLImmediate.clientColor[1] = g;
+        GLImmediate.clientColor[2] = b;
+        GLImmediate.clientColor[3] = a;
+        GLctx.vertexAttrib4fv(GLImmediate.COLOR, GLImmediate.clientColor);
+      }
+    }function _glColor3f(r, g, b) {
+      _emscripten_glColor4f(r, g, b, 1);
+    }
+
+  function _glutSpecialFunc(func) {
+      GLUT.specialFunc = func;
+    }
+
+  function _glVertex3f(x, y, z) {
+      assert(GLImmediate.mode >= 0); // must be in begin/end
+      GLImmediate.vertexData[GLImmediate.vertexCounter++] = x;
+      GLImmediate.vertexData[GLImmediate.vertexCounter++] = y;
+      GLImmediate.vertexData[GLImmediate.vertexCounter++] = z || 0;
+      assert(GLImmediate.vertexCounter << 2 < GL.MAX_TEMP_BUFFER_SIZE);
+      GLImmediate.addRendererComponent(GLImmediate.VERTEX, 3, GLctx.FLOAT);
+    }
+
+  function _glutSpecialUpFunc(func) {
+      GLUT.specialUpFunc = func;
+    }
+
+  function _glutInit(argcp, argv) {
+      // Ignore arguments
+      GLUT.initTime = Date.now();
+  
+      var isTouchDevice = 'ontouchstart' in document.documentElement;
+  
+      window.addEventListener("keydown", GLUT.onKeydown, true);
+      window.addEventListener("keyup", GLUT.onKeyup, true);
+      if (isTouchDevice) {
+        window.addEventListener("touchmove", GLUT.onMousemove, true);
+        window.addEventListener("touchstart", GLUT.onMouseButtonDown, true);
+        window.addEventListener("touchend", GLUT.onMouseButtonUp, true);
+      } else {
+        window.addEventListener("mousemove", GLUT.onMousemove, true);
+        window.addEventListener("mousedown", GLUT.onMouseButtonDown, true);
+        window.addEventListener("mouseup", GLUT.onMouseButtonUp, true);
+        // IE9, Chrome, Safari, Opera
+        window.addEventListener("mousewheel", GLUT.onMouseWheel, true);
+        // Firefox
+        window.addEventListener("DOMMouseScroll", GLUT.onMouseWheel, true);
+      }
+  
+      Browser.resizeListeners.push(function(width, height) {
+        if (GLUT.reshapeFunc) {
+        	Runtime.dynCall('vii', GLUT.reshapeFunc, [width, height]);
+        }
+      });
+  
+      __ATEXIT__.push({ func: function() {
+        window.removeEventListener("keydown", GLUT.onKeydown, true);
+        window.removeEventListener("keyup", GLUT.onKeyup, true);
+        if (isTouchDevice) {
+          window.removeEventListener("touchmove", GLUT.onMousemove, true);
+          window.removeEventListener("touchstart", GLUT.onMouseButtonDown, true);
+          window.removeEventListener("touchend", GLUT.onMouseButtonUp, true);
+        } else {
+          window.removeEventListener("mousemove", GLUT.onMousemove, true);
+          window.removeEventListener("mousedown", GLUT.onMouseButtonDown, true);
+          window.removeEventListener("mouseup", GLUT.onMouseButtonUp, true);
+          // IE9, Chrome, Safari, Opera
+          window.removeEventListener("mousewheel", GLUT.onMouseWheel, true);
+          // Firefox
+          window.removeEventListener("DOMMouseScroll", GLUT.onMouseWheel, true);
+        }
+        Module["canvas"].width = Module["canvas"].height = 1;
+      } });
+    }
+
+  
+  function _glutReshapeWindow(width, height) {
+      GLUT.cancelFullScreen();
+      Browser.setCanvasSize(width, height);
+      if (GLUT.reshapeFunc) {
+        Runtime.dynCall('vii', GLUT.reshapeFunc, [width, height]);
+      }
+      _glutPostRedisplay();
+    }function _glutMainLoop() {
+      _glutReshapeWindow(Module['canvas'].width, Module['canvas'].height);
+      _glutPostRedisplay();
+      throw 'SimulateInfiniteLoop';
+    }
+
+  function _glGetError() {
+      // First return any GL error generated by the emscripten library_gl.js interop layer.
+      if (GL.lastError) {
+        var error = GL.lastError;
+        GL.lastError = 0/*GL_NO_ERROR*/;
+        return error;
+      } else { // If there were none, return the GL error from the browser GL context.
+        return GLctx.getError();
+      }
+    }
+
+   
+  Module["_i64Add"] = _i64Add;
+
   function _gluLookAt(ex, ey, ez, cx, cy, cz, ux, uy, uz) {
       GLImmediate.matricesModified = true;
       GLImmediate.matrixVersion[GLImmediate.currentMatrix] = (GLImmediate.matrixVersion[GLImmediate.currentMatrix] + 1)|0;
@@ -11679,7 +11679,7 @@ function invoke_v(index) {
 }
 
 Module.asmGlobalArg = { "Math": Math, "Int8Array": Int8Array, "Int16Array": Int16Array, "Int32Array": Int32Array, "Uint8Array": Uint8Array, "Uint16Array": Uint16Array, "Uint32Array": Uint32Array, "Float32Array": Float32Array, "Float64Array": Float64Array };
-Module.asmLibraryArg = { "abort": abort, "assert": assert, "min": Math_min, "nullFunc_vi": nullFunc_vi, "nullFunc_viii": nullFunc_viii, "nullFunc_v": nullFunc_v, "invoke_vi": invoke_vi, "invoke_viii": invoke_viii, "invoke_v": invoke_v, "_glUseProgram": _glUseProgram, "_glutIdleFunc": _glutIdleFunc, "_glutPostRedisplay": _glutPostRedisplay, "_glVertexAttribPointer": _glVertexAttribPointer, "_glHint": _glHint, "_send": _send, "_glRotatef": _glRotatef, "_glColor4f": _glColor4f, "_glutDisplayFunc": _glutDisplayFunc, "_glutKeyboardFunc": _glutKeyboardFunc, "_glutSetCursor": _glutSetCursor, "_glLineWidth": _glLineWidth, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_gluLookAt": _gluLookAt, "_glutKeyboardUpFunc": _glutKeyboardUpFunc, "_glClearColor": _glClearColor, "_glDeleteProgram": _glDeleteProgram, "_fflush": _fflush, "_glutInitDisplayMode": _glutInitDisplayMode, "_glutSpecialUpFunc": _glutSpecialUpFunc, "_glAttachShader": _glAttachShader, "_fprintf": _fprintf, "__reallyNegative": __reallyNegative, "_glTranslatef": _glTranslatef, "_sbrk": _sbrk, "_glIsEnabled": _glIsEnabled, "_glutReshapeWindow": _glutReshapeWindow, "_glDisableVertexAttribArray": _glDisableVertexAttribArray, "_glDepthFunc": _glDepthFunc, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_glPolygonMode": _glPolygonMode, "_glPopMatrix": _glPopMatrix, "_glMatrixMode": _glMatrixMode, "_glGetFloatv": _glGetFloatv, "_sysconf": _sysconf, "___setErrNo": ___setErrNo, "_glutTimerFunc": _glutTimerFunc, "_glClear": _glClear, "_glBindAttribLocation": _glBindAttribLocation, "_glColor3f": _glColor3f, "_emscripten_glColor4f": _emscripten_glColor4f, "_printf": _printf, "_glGetError": _glGetError, "_glVertex3f": _glVertex3f, "_fileno": _fileno, "_glPushMatrix": _glPushMatrix, "_glEnable": _glEnable, "_mkport": _mkport, "_glutInit": _glutInit, "_glLoadIdentity": _glLoadIdentity, "_glGetIntegerv": _glGetIntegerv, "_glGetString": _glGetString, "_glEnd": _glEnd, "_glActiveTexture": _glActiveTexture, "_write": _write, "_glVertex2f": _glVertex2f, "_gluPerspective": _gluPerspective, "___errno_location": ___errno_location, "_glutSpecialFunc": _glutSpecialFunc, "_glShaderSource": _glShaderSource, "_glCompileShader": _glCompileShader, "_glBegin": _glBegin, "_glOrtho": _glOrtho, "__exit": __exit, "_glEnableVertexAttribArray": _glEnableVertexAttribArray, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_abort": _abort, "_glBindBuffer": _glBindBuffer, "_fwrite": _fwrite, "_glDisable": _glDisable, "_time": _time, "_glGetBooleanv": _glGetBooleanv, "_glDetachShader": _glDetachShader, "_glutCreateWindow": _glutCreateWindow, "_glutSwapBuffers": _glutSwapBuffers, "__formatString": __formatString, "_pwrite": _pwrite, "_glutMainLoop": _glutMainLoop, "_exit": _exit, "_glCreateShader": _glCreateShader, "_glLinkProgram": _glLinkProgram, "_glutInitWindowSize": _glutInitWindowSize, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "cttz_i8": cttz_i8, "ctlz_i8": ctlz_i8, "NaN": NaN, "Infinity": Infinity };
+Module.asmLibraryArg = { "abort": abort, "assert": assert, "min": Math_min, "nullFunc_vi": nullFunc_vi, "nullFunc_viii": nullFunc_viii, "nullFunc_v": nullFunc_v, "invoke_vi": invoke_vi, "invoke_viii": invoke_viii, "invoke_v": invoke_v, "_glUseProgram": _glUseProgram, "_glutIdleFunc": _glutIdleFunc, "_glutPostRedisplay": _glutPostRedisplay, "_glVertexAttribPointer": _glVertexAttribPointer, "_glHint": _glHint, "_send": _send, "_glRotatef": _glRotatef, "_glColor4f": _glColor4f, "_glutDisplayFunc": _glutDisplayFunc, "_glutKeyboardFunc": _glutKeyboardFunc, "_glutSetCursor": _glutSetCursor, "_glLineWidth": _glLineWidth, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_gluLookAt": _gluLookAt, "_glutKeyboardUpFunc": _glutKeyboardUpFunc, "_glClearColor": _glClearColor, "_glDeleteProgram": _glDeleteProgram, "_fflush": _fflush, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_glutInitDisplayMode": _glutInitDisplayMode, "_glutSpecialUpFunc": _glutSpecialUpFunc, "_glAttachShader": _glAttachShader, "_fprintf": _fprintf, "__reallyNegative": __reallyNegative, "_glTranslatef": _glTranslatef, "_sbrk": _sbrk, "_glIsEnabled": _glIsEnabled, "_glutReshapeWindow": _glutReshapeWindow, "_glDisableVertexAttribArray": _glDisableVertexAttribArray, "_glDepthFunc": _glDepthFunc, "_glCreateShader": _glCreateShader, "_glPolygonMode": _glPolygonMode, "_glPopMatrix": _glPopMatrix, "_glMatrixMode": _glMatrixMode, "_glGetFloatv": _glGetFloatv, "_sysconf": _sysconf, "___setErrNo": ___setErrNo, "_glutTimerFunc": _glutTimerFunc, "_glClear": _glClear, "_glBindAttribLocation": _glBindAttribLocation, "_glColor3f": _glColor3f, "_emscripten_glColor4f": _emscripten_glColor4f, "_printf": _printf, "_glGetError": _glGetError, "_glVertex3f": _glVertex3f, "_fileno": _fileno, "_glPushMatrix": _glPushMatrix, "_glEnable": _glEnable, "_mkport": _mkport, "_glutInit": _glutInit, "_glLoadIdentity": _glLoadIdentity, "_glGetIntegerv": _glGetIntegerv, "_glGetString": _glGetString, "_glEnd": _glEnd, "_glActiveTexture": _glActiveTexture, "_write": _write, "_glVertex2f": _glVertex2f, "_gluPerspective": _gluPerspective, "___errno_location": ___errno_location, "_glutSpecialFunc": _glutSpecialFunc, "_glShaderSource": _glShaderSource, "_glCompileShader": _glCompileShader, "_glBegin": _glBegin, "_glOrtho": _glOrtho, "__exit": __exit, "_glEnableVertexAttribArray": _glEnableVertexAttribArray, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_abort": _abort, "_glBindBuffer": _glBindBuffer, "_fwrite": _fwrite, "_glDisable": _glDisable, "_time": _time, "_glGetBooleanv": _glGetBooleanv, "_glDetachShader": _glDetachShader, "_glutCreateWindow": _glutCreateWindow, "_glutSwapBuffers": _glutSwapBuffers, "__formatString": __formatString, "_pwrite": _pwrite, "_glutMainLoop": _glutMainLoop, "_exit": _exit, "_glLinkProgram": _glLinkProgram, "_glutInitWindowSize": _glutInitWindowSize, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "cttz_i8": cttz_i8, "ctlz_i8": ctlz_i8, "NaN": NaN, "Infinity": Infinity };
 // EMSCRIPTEN_START_ASM
 var asm = (function(global, env, buffer) {
   'almost asm';
@@ -11760,6 +11760,7 @@ var asm = (function(global, env, buffer) {
   var _glClearColor=env._glClearColor;
   var _glDeleteProgram=env._glDeleteProgram;
   var _fflush=env._fflush;
+  var _emscripten_memcpy_big=env._emscripten_memcpy_big;
   var _glutInitDisplayMode=env._glutInitDisplayMode;
   var _glutSpecialUpFunc=env._glutSpecialUpFunc;
   var _glAttachShader=env._glAttachShader;
@@ -11771,7 +11772,7 @@ var asm = (function(global, env, buffer) {
   var _glutReshapeWindow=env._glutReshapeWindow;
   var _glDisableVertexAttribArray=env._glDisableVertexAttribArray;
   var _glDepthFunc=env._glDepthFunc;
-  var _emscripten_memcpy_big=env._emscripten_memcpy_big;
+  var _glCreateShader=env._glCreateShader;
   var _glPolygonMode=env._glPolygonMode;
   var _glPopMatrix=env._glPopMatrix;
   var _glMatrixMode=env._glMatrixMode;
@@ -11821,7 +11822,6 @@ var asm = (function(global, env, buffer) {
   var _pwrite=env._pwrite;
   var _glutMainLoop=env._glutMainLoop;
   var _exit=env._exit;
-  var _glCreateShader=env._glCreateShader;
   var _glLinkProgram=env._glLinkProgram;
   var _glutInitWindowSize=env._glutInitWindowSize;
   var tempFloat = 0.0;
@@ -11879,6 +11879,17 @@ function getTempRet0() {
   return tempRet0|0;
 }
 
+function _drawText() {
+ var label = 0, sp = 0;
+ sp = STACKTOP;
+ _glPushMatrix();
+ _glDisable(2896);
+ _glOrtho(0.0,400.0,0.0,400.0,0.0,400.0);
+ _glMatrixMode(5888);
+ _glColor4f(0.5,0.5,0.5,1.0499999523162842);
+ _glPopMatrix();
+ STACKTOP = sp;return;
+}
 function _getBlock($number) {
  $number = $number|0;
  var $0 = 0, $1 = 0, label = 0, sp = 0;
@@ -11930,29 +11941,57 @@ function _getBlock($number) {
    STACKTOP = sp;return;
    break;
   }
-  case 4:  {
+  case 2:  {
    _glBegin(7);
-   _glColor4f(0.69999998807907104,0.69999998807907104,0.0,1.0);
+   _glColor4f(0.25,0.40999999642372131,1.0,1.0);
    _glVertex3f(2.0,0.0,0.0);
-   _glColor4f(0.69999998807907104,0.69999998807907104,0.0,1.0);
+   _glColor4f(0.25,0.40999999642372131,1.0,1.0);
    _glVertex3f(2.0,1.0,0.0);
-   _glColor4f(1.0,1.0,0.0,1.0);
+   _glColor4f(0.34999999403953552,0.50999999046325684,1.0,1.0);
    _glVertex3f(1.0,1.0,0.0);
-   _glColor4f(0.69999998807907104,0.69999998807907104,0.0,1.0);
+   _glColor4f(0.25,0.40999999642372131,1.0,1.0);
    _glVertex3f(1.0,0.0,0.0);
    _glEnd();
    STACKTOP = sp;return;
    break;
   }
-  case 2:  {
+  case 4:  {
    _glBegin(7);
-   _glColor4f(0.0,0.0,0.30000001192092896,1.0);
+   _glColor4f(0.99000000953674316,0.70999997854232788,0.18999999761581421,1.0);
    _glVertex3f(2.0,0.0,0.0);
-   _glColor4f(0.0,0.0,0.30000001192092896,1.0);
+   _glColor4f(0.99000000953674316,0.70999997854232788,0.18999999761581421,1.0);
    _glVertex3f(2.0,1.0,0.0);
-   _glColor4f(0.0,0.0,1.0,1.0);
+   _glColor4f(1.0,0.81000000238418579,0.28999999165534973,1.0);
    _glVertex3f(1.0,1.0,0.0);
-   _glColor4f(0.0,0.0,0.30000001192092896,1.0);
+   _glColor4f(0.99000000953674316,0.70999997854232788,0.18999999761581421,1.0);
+   _glVertex3f(1.0,0.0,0.0);
+   _glEnd();
+   STACKTOP = sp;return;
+   break;
+  }
+  case 6:  {
+   _glBegin(7);
+   _glColor4f(0.0,0.62000000476837158,0.40999999642372131,1.0);
+   _glVertex3f(2.0,0.0,0.0);
+   _glColor4f(0.0,0.62000000476837158,0.40999999642372131,1.0);
+   _glVertex3f(2.0,1.0,0.0);
+   _glColor4f(0.0,0.72000002861022949,0.50999999046325684,1.0);
+   _glVertex3f(1.0,1.0,0.0);
+   _glColor4f(0.0,0.62000000476837158,0.40999999642372131,1.0);
+   _glVertex3f(1.0,0.0,0.0);
+   _glEnd();
+   STACKTOP = sp;return;
+   break;
+  }
+  case 7:  {
+   _glBegin(7);
+   _glColor3f(0.75999999046325684,0.12999999523162842,0.14000000059604645);
+   _glVertex3f(2.0,0.0,0.0);
+   _glColor3f(0.75999999046325684,0.12999999523162842,0.14000000059604645);
+   _glVertex3f(2.0,1.0,0.0);
+   _glColor3f(0.86000001430511474,0.23000000417232513,0.23999999463558197);
+   _glVertex3f(1.0,1.0,0.0);
+   _glColor3f(0.75999999046325684,0.12999999523162842,0.14000000059604645);
    _glVertex3f(1.0,0.0,0.0);
    _glEnd();
    STACKTOP = sp;return;
@@ -11964,7 +12003,7 @@ function _getBlock($number) {
    _glVertex3f(2.0,0.0,0.0);
    _glColor3f(1.0,1.0,1.0);
    _glVertex3f(2.0,1.0,0.0);
-   _glColor3f(0.60000002384185791,0.60000002384185791,0.60000002384185791);
+   _glColor3f(0.89999997615814208,0.89999997615814208,0.89999997615814208);
    _glVertex3f(1.0,1.0,0.0);
    _glColor3f(1.0,1.0,1.0);
    _glVertex3f(1.0,0.0,0.0);
@@ -11972,43 +12011,29 @@ function _getBlock($number) {
    STACKTOP = sp;return;
    break;
   }
-  case 6:  {
+  case 9:  {
    _glBegin(7);
-   _glColor4f(0.0,0.20000000298023224,0.0,1.0);
+   _glColor4f(0.94999998807907104,0.44999998807907104,0.20999999344348907,1.0);
    _glVertex3f(2.0,0.0,0.0);
-   _glColor4f(0.0,0.20000000298023224,0.0,1.0);
+   _glColor4f(0.94999998807907104,0.44999998807907104,0.20999999344348907,1.0);
    _glVertex3f(2.0,1.0,0.0);
-   _glColor4f(0.0,0.69999998807907104,0.0,1.0);
+   _glColor4f(1.0,0.55000001192092896,0.31000000238418579,1.0);
    _glVertex3f(1.0,1.0,0.0);
-   _glColor4f(0.0,0.20000000298023224,0.0,1.0);
+   _glColor4f(0.94999998807907104,0.44999998807907104,0.20999999344348907,1.0);
    _glVertex3f(1.0,0.0,0.0);
    _glEnd();
    STACKTOP = sp;return;
    break;
   }
-  case 11:  {
+  case 10:  {
    _glBegin(7);
-   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
+   _glColor4f(0.60000002384185791,0.18999999761581421,0.80000001192092896,1.5);
    _glVertex3f(2.0,0.0,0.0);
-   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
+   _glColor4f(0.60000002384185791,0.18999999761581421,0.80000001192092896,1.5);
    _glVertex3f(2.0,1.0,0.0);
-   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
+   _glColor4f(0.69999998807907104,0.28999999165534973,0.89999997615814208,1.5);
    _glVertex3f(1.0,1.0,0.0);
-   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
-   _glVertex3f(1.0,0.0,0.0);
-   _glEnd();
-   STACKTOP = sp;return;
-   break;
-  }
-  case 7:  {
-   _glBegin(7);
-   _glColor3f(0.40000000596046448,0.0,0.0);
-   _glVertex3f(2.0,0.0,0.0);
-   _glColor3f(0.40000000596046448,0.0,0.0);
-   _glVertex3f(2.0,1.0,0.0);
-   _glColor3f(1.0,0.0,0.0);
-   _glVertex3f(1.0,1.0,0.0);
-   _glColor3f(0.40000000596046448,0.0,0.0);
+   _glColor4f(0.60000002384185791,0.18999999761581421,0.80000001192092896,1.5);
    _glVertex3f(1.0,0.0,0.0);
    _glEnd();
    STACKTOP = sp;return;
@@ -12028,29 +12053,15 @@ function _getBlock($number) {
    STACKTOP = sp;return;
    break;
   }
-  case 9:  {
+  case 11:  {
    _glBegin(7);
-   _glColor4f(1.0,0.44999998807907104,0.0,1.0);
+   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
    _glVertex3f(2.0,0.0,0.0);
-   _glColor4f(1.0,0.44999998807907104,0.0,1.0);
+   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
    _glVertex3f(2.0,1.0,0.0);
-   _glColor4f(1.0,0.89999997615814208,0.0,1.0);
+   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
    _glVertex3f(1.0,1.0,0.0);
-   _glColor4f(1.0,0.44999998807907104,0.0,1.0);
-   _glVertex3f(1.0,0.0,0.0);
-   _glEnd();
-   STACKTOP = sp;return;
-   break;
-  }
-  case 10:  {
-   _glBegin(7);
-   _glColor4f(0.5,0.0,1.0,1.5);
-   _glVertex3f(2.0,0.0,0.0);
-   _glColor4f(0.5,0.0,1.0,1.5);
-   _glVertex3f(2.0,1.0,0.0);
-   _glColor4f(0.69999998807907104,0.0,1.0,1.0);
-   _glVertex3f(1.0,1.0,0.0);
-   _glColor4f(0.5,0.0,1.0,1.5);
+   _glColor4f(0.80000001192092896,0.80000001192092896,0.80000001192092896,1.0);
    _glVertex3f(1.0,0.0,0.0);
    _glEnd();
    STACKTOP = sp;return;
@@ -12325,14 +12336,14 @@ function _getRotNumbers($rotPiece) {
  STACKTOP = STACKTOP + 16|0; if ((STACKTOP|0) >= (STACK_MAX|0)) abort();
  $0 = $rotPiece;
  $1 = $0;
- if ((($1|0) == 0)) {
-  $retVal = 0;
- } else if ((($1|0) == 1)) {
+ if ((($1|0) == 1)) {
   $retVal = 16;
  } else if ((($1|0) == 2)) {
   $retVal = 32;
  } else if ((($1|0) == 3)) {
   $retVal = 48;
+ } else if ((($1|0) == 0)) {
+  $retVal = 0;
  } else {
   $retVal = 0;
  }
@@ -12570,23 +12581,6 @@ function _loadNewPiece($pieceNo,$pieceRot,$makeActive) {
  $2 = $makeActive;
  $3 = $0;
  switch ($3|0) {
- case 0:  {
-  $4 = $1;
-  $5 = $2;
-  $6 = HEAP32[15800>>2]|0;
-  _loadPiece(160,$4,$5,$6);
-  $7 = HEAP32[15800>>2]|0;
-  HEAP32[15808>>2] = $7;
-  $8 = $2;
-  $9 = ($8|0)==(1);
-  if ($9) {
-   $10 = HEAP32[104>>2]|0;
-   $11 = (($10) + 1)|0;
-   HEAP32[104>>2] = $11;
-  }
-  STACKTOP = sp;return;
-  break;
- }
  case 1:  {
   $12 = $1;
   $13 = $2;
@@ -12651,6 +12645,23 @@ function _loadNewPiece($pieceNo,$pieceRot,$makeActive) {
    $42 = HEAP32[136>>2]|0;
    $43 = (($42) + 1)|0;
    HEAP32[136>>2] = $43;
+  }
+  STACKTOP = sp;return;
+  break;
+ }
+ case 0:  {
+  $4 = $1;
+  $5 = $2;
+  $6 = HEAP32[15800>>2]|0;
+  _loadPiece(160,$4,$5,$6);
+  $7 = HEAP32[15800>>2]|0;
+  HEAP32[15808>>2] = $7;
+  $8 = $2;
+  $9 = ($8|0)==(1);
+  if ($9) {
+   $10 = HEAP32[104>>2]|0;
+   $11 = (($10) + 1)|0;
+   HEAP32[104>>2] = $11;
   }
   STACKTOP = sp;return;
   break;
@@ -13573,6 +13584,7 @@ function _renderGameScreen() {
  $7 = ($6|0)!=(0);
  if ($7) {
  }
+ _drawText();
  _drawBoard();
  $8 = HEAP32[15784>>2]|0;
  $9 = HEAP32[15792>>2]|0;
@@ -13632,33 +13644,6 @@ function _key($key,$px,$py) {
  $4 = $3&255;
  do {
   switch ($4|0) {
-  case 98:  {
-   $27 = HEAP32[80>>2]|0;
-   $28 = ($27|0)!=(0);
-   $29 = $28 ^ 1;
-   $30 = $29&1;
-   HEAP32[80>>2] = $30;
-   STACKTOP = sp;return;
-   break;
-  }
-  case 108:  {
-   $31 = HEAP32[88>>2]|0;
-   $32 = ($31|0)!=(0);
-   $33 = $32 ^ 1;
-   $34 = $33&1;
-   HEAP32[88>>2] = $34;
-   STACKTOP = sp;return;
-   break;
-  }
-  case 102:  {
-   $35 = HEAP32[96>>2]|0;
-   $36 = ($35|0)!=(0);
-   $37 = $36 ^ 1;
-   $38 = $37&1;
-   HEAP32[96>>2] = $38;
-   STACKTOP = sp;return;
-   break;
-  }
   case 116:  {
    $39 = HEAP32[48>>2]|0;
    $40 = ($39|0)!=(0);
@@ -13697,6 +13682,33 @@ function _key($key,$px,$py) {
    _glEnable(16385);
    _glEnable(16384);
    _glEnable(2896);
+   STACKTOP = sp;return;
+   break;
+  }
+  case 98:  {
+   $27 = HEAP32[80>>2]|0;
+   $28 = ($27|0)!=(0);
+   $29 = $28 ^ 1;
+   $30 = $29&1;
+   HEAP32[80>>2] = $30;
+   STACKTOP = sp;return;
+   break;
+  }
+  case 108:  {
+   $31 = HEAP32[88>>2]|0;
+   $32 = ($31|0)!=(0);
+   $33 = $32 ^ 1;
+   $34 = $33&1;
+   HEAP32[88>>2] = $34;
+   STACKTOP = sp;return;
+   break;
+  }
+  case 102:  {
+   $35 = HEAP32[96>>2]|0;
+   $36 = ($35|0)!=(0);
+   $37 = $36 ^ 1;
+   $38 = $37&1;
+   HEAP32[96>>2] = $38;
    STACKTOP = sp;return;
    break;
   }
@@ -13846,6 +13858,34 @@ function _special($key,$x,$y) {
    $i = $53;
    break;
   }
+  case 101:  {
+   $28 = HEAP32[8>>2]|0;
+   $29 = ($28|0)==(2);
+   if ($29) {
+    $30 = HEAP32[24>>2]|0;
+    $31 = ($30|0)==(0);
+    if ($31) {
+     _rotatePiece();
+     break L1;
+    }
+   }
+   $32 = HEAP32[8>>2]|0;
+   $33 = ($32|0)==(1);
+   if ($33) {
+    $34 = HEAP32[15936>>2]|0;
+    $35 = (($34) - 1)|0;
+    HEAP32[15936>>2] = $35;
+    $36 = HEAP32[15936>>2]|0;
+    $37 = ($36|0)<(0);
+    if ($37) {
+     HEAP32[15936>>2] = 0;
+    }
+   }
+   $38 = $i;
+   $39 = (($38) + 1)|0;
+   $i = $39;
+   break;
+  }
   case 103:  {
    $12 = HEAP32[8>>2]|0;
    $13 = ($12|0)==(2);
@@ -13883,32 +13923,15 @@ function _special($key,$x,$y) {
    $i = $27;
    break;
   }
-  case 101:  {
-   $28 = HEAP32[8>>2]|0;
-   $29 = ($28|0)==(2);
-   if ($29) {
-    $30 = HEAP32[24>>2]|0;
-    $31 = ($30|0)==(0);
-    if ($31) {
-     _rotatePiece();
-     break L1;
-    }
+  case 102:  {
+   $4 = HEAP32[24>>2]|0;
+   $5 = ($4|0)==(0);
+   if ($5) {
+    _movePieceX(1);
    }
-   $32 = HEAP32[8>>2]|0;
-   $33 = ($32|0)==(1);
-   if ($33) {
-    $34 = HEAP32[15936>>2]|0;
-    $35 = (($34) - 1)|0;
-    HEAP32[15936>>2] = $35;
-    $36 = HEAP32[15936>>2]|0;
-    $37 = ($36|0)<(0);
-    if ($37) {
-     HEAP32[15936>>2] = 0;
-    }
-   }
-   $38 = $i;
-   $39 = (($38) + 1)|0;
-   $i = $39;
+   $6 = $i;
+   $7 = (($6) + 1)|0;
+   $i = $7;
    break;
   }
   case 100:  {
@@ -13920,17 +13943,6 @@ function _special($key,$x,$y) {
    $10 = $i;
    $11 = (($10) + 1)|0;
    $i = $11;
-   break;
-  }
-  case 102:  {
-   $4 = HEAP32[24>>2]|0;
-   $5 = ($4|0)==(0);
-   if ($5) {
-    _movePieceX(1);
-   }
-   $6 = $i;
-   $7 = (($6) + 1)|0;
-   $i = $7;
    break;
   }
   default: {
@@ -14107,7 +14119,7 @@ function _main($argc,$argv) {
  $3 = $2;
  _glutInit(($1|0),($3|0));
  _glutInitDisplayMode(50);
- _glutInitWindowSize(800,600);
+ _glutInitWindowSize(960,720);
  (_glutCreateWindow((16040|0))|0);
  _initWindow();
  _glutMainLoop();

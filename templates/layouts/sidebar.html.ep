@@ -44,7 +44,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li<% if ( &url_for =~ /misc\/schwarzschild/ ) { %> class="active" <% } %>><a href="/misc/schwarzschild"><i class="fa fa-angle-double-right"></i> Schwarzschild Radius</a></li>
+                                <li<% if ( &url_for =~ /misc\/schwarzschild/ ) { %> class="active" <% } %>><a href="/misc/schwarzschild"><i class="fa fa-angle-double-right"></i> Schwarzschild Radius</a> <small class="badge pull-right bg-green" style="position: relative; top: 7px; right: 10px;">new</small></li>
                                 <li<% if ( &url_for =~ /misc\/tetris/ ) { %> class="active" <% } %>><a href="/misc/tetris"><i class="fa fa-angle-double-right"></i> WebGL Tetris</a></li>
                             </ul>
                         </li> 
