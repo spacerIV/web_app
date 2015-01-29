@@ -33,7 +33,34 @@ sub tetris {
 
     $self->render( title => 'WebGL Tetris', 
                    msg   => 'WebGL Tetris', 
-                   blurb => 'Ported from a C, OpenGL App to Javascript using Emscripten' ),
+                   blurb => 'Ported from C & OpenGL to Javascript using Emscripten' ),
+}
+
+sub csrf {
+    my $self = shift;
+
+    # POST only param
+    my $city = $self->req->body_params->param('city');
+
+    unless ( defined $city ) {
+        $self->render( title => 'CSRF', 
+                       msg   => 'CSRF', 
+                       blurb => 'This form contains a hidden csrf token', );
+        return;
+     }
+
+    # Check CSRF token
+    my $validation = $self->validation;
+
+    return $self->render(text => 'Bad CSRF token!', status => 403)
+        if $validation->csrf_protect->has_error('csrf_token');
+
+    $city = $validation->required('city')->param('city');
+
+    $self->render( title => 'CSRF', 
+                   msg   => 'CSRF', 
+                   text  => "Low orbit ion cannon pointed at $city!" )
+        unless $validation->has_error;
 }
 
 1;

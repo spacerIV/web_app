@@ -20,7 +20,6 @@ sub startup {
     # maps weather
     $r->route( '/maps/weather' )->to( 'maps#weather' );
     $r->route( '/maps/getweather/*location' )->to( 'maps#get_weather' );
-
     # map borisbikes
     $r->route( '/maps/borisbikes' )->to( 'maps#borisbikes' );
     $r->route( '/maps/get_bb_station_info/*station_id' )->to( 'maps#get_bb_station_info' );
@@ -28,9 +27,17 @@ sub startup {
     # misc schwarzschild
     $r->route( '/misc/schwarzschild' )->to( 'misc#schwarzschild' );
     $r->route( '/misc/calculate_schwarzschild_radius/*mass' )->to( 'misc#calculate_schwarzschild_radius' );
-
     # misc tetris
     $r->route( '/misc/tetris' )->to( 'misc#tetris' );
+    # misc csrf
+    $r->route( '/misc/csrf' )->to( 'misc#csrf' );
+
+    # charts morris
+    $r->route( '/charts/morris' )->to( 'charts#morris' );
+    # charts flot
+    $r->route( '/charts/flot' )->to( 'charts#flot' );
+    # charts inline
+    $r->route( '/charts/inline' )->to( 'charts#inline' );
 }
 
 1;

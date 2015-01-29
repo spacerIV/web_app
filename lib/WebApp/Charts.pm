@@ -2,22 +2,26 @@ package WebApp::Charts;
 
 use Mojo::Base 'Mojolicious::Controller';
 
-sub morris 
-{
-    my $self = shift;
+use Data::Dumper;
 
-    $self->render( title => 'Morris',
-                   msg   => 'Morris', 
-                   blurb => '  some morris charts' );
+use Mojo::Log;
+
+sub morris {
+    shift->render( title => 'Morris Charts', 
+                   msg   => 'Morris Charts', 
+                   blurb => '' ),
 }
 
-sub flot 
-{
-    my $self = shift;
+sub flot {
+    shift->render( title => 'Flot Charts', 
+                   msg   => 'Flot Charts', 
+                   blurb => '' ),
+}
 
-    $self->render( title => 'Flot',
-                   msg   => 'Flot', 
-                   blurb => '  some flot charts' );
+sub inline {
+    shift->render( title => 'Inline Charts', 
+                   msg   => 'Inline Charts', 
+                   blurb => '' ),
 }
 
 1;

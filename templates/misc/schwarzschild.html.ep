@@ -29,7 +29,7 @@
                                 '        </div> ' +
                                 '        <div class="box-body">' + 
                                 '            <div style="text-align:center"> ' +
-                                '                <h1> ' + content + ' meters</h1> ' +
+                                '               <h3>' + 'You\'d need to get your radius to: </h3><p><h1>' + content + ' meters</h1> ' +
                                 '            </div>' + 
                                 '        </div>' + 
                                 '    </div>' + 
