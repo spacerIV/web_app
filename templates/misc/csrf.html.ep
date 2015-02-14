@@ -1,0 +1,10 @@
+% layout 'dashboard';
+
+% title 'Cross Site Request Forgery ';
+
+%= form_for '/misc/csrf' => ( method => 'POST' ) => begin
+    %= csrf_field
+    %= label_for city => 'Which city to point low orbit ion cannon at?'
+    %= text_field 'city'
+    %= submit_button
+%= end
