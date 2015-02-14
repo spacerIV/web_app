@@ -54,21 +54,6 @@
                             </ul>
                         </li> 
 
-                        <!-- Charts -->
-
-                        <li class="treeview <% if ( &url_for =~ /charts\// ) { %> active <% } %>">
-                            <a href="#">
-                                <i class="fa fa-bar-chart-o"></i> 
-                                    <span>Charts</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li<% if ( &url_for =~ /charts\/morris/ ) { %> class="active" <% } %>><a href="/charts/morris"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li<% if ( &url_for =~ /charts\/flot/ ) { %> class="active" <% } %>><a href="/charts/flot"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li<% if ( &url_for =~ /charts\/inline/ ) { %> class="active" <% } %>><a href="/charts/inline"><i class="fa fa-angle-double-right"></i> Inline</a></li>
-                            </ul>
-                        </li> 
-
                     </ul>
 
                 </section>

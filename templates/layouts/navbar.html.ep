@@ -31,9 +31,6 @@
 % if ( &url_for =~ /misc\/csrf/ ) { 
                         <li><a href="#">csrf</a></li>
 % }
-% if ( &url_for =~ /charts/ ) { 
-                        <li><a href="#">charts</a></li>
-% } 
 % if ( &url_for =~ /charts\/morris/ ) { 
                         <li><a href="#">morris</a></li>
 % }

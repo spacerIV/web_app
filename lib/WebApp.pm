@@ -31,13 +31,6 @@ sub startup {
     $r->route( '/misc/tetris' )->to( 'misc#tetris' );
     # misc csrf
     $r->route( '/misc/csrf' )->to( 'misc#csrf' );
-
-    # charts morris
-    $r->route( '/charts/morris' )->to( 'charts#morris' );
-    # charts flot
-    $r->route( '/charts/flot' )->to( 'charts#flot' );
-    # charts inline
-    $r->route( '/charts/inline' )->to( 'charts#inline' );
 }
 
 1;
