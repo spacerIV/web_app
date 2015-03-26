@@ -120,7 +120,7 @@
         
         </script>
 
-        <div class="col-md-12">
+        <div class="col-md-12" style="height:90vh;">
             <div class="box box-primary">
                 <div class="box-body">
                     <div id="map_canvas"></div>
