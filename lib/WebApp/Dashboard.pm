@@ -6,7 +6,7 @@ sub index {
 
   $self->render( title => 'Welcome', 
                  msg   => 'Mojolicious', 
-                 blurb => ' the real-time web framework!' );
+                 blurb => ' the real-time web framework' );
 }
 
 1;
