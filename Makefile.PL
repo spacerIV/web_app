@@ -17,7 +17,6 @@ WriteMakefile(
       'URI'                                  => '1.60',
       'WWW::Wunderground::API'               => '0.03',
       'List::MoreUtils'                      => 0,
-      'WWW::Wunderground::API'               => 0,
       'WebService::BorisBikes'               => 0,
       'Data::Dumper'                         => 0,
       'HTML::Entities'                       => 0,
