@@ -1,4 +1,3 @@
-
 [Wed Jul  2 11:28:29 2014] [info] Listening at "http://*:3000".
 [Wed Jul  2 11:28:29 2014] [info] Listening at "http://*:3000".
 [Wed Jul  2 11:30:47 2014] [debug] Your secret passphrase needs to be changed!!!
@@ -37198,3 +37197,76 @@ $_M "
 [Sun Feb 14 10:52:56 2016] [debug] Rendering cached template "layouts/body.html.ep".
 [Sun Feb 14 10:52:56 2016] [debug] Rendering cached template "layouts/footer.html.ep".
 [Sun Feb 14 10:52:56 2016] [debug] 200 OK (0.017160s, 58.275/s).
+[Sun Feb 14 13:08:26 2016] [debug] Your secret passphrase needs to be changed!!!
+[Sun Feb 14 13:08:26 2016] [debug] GET "/misc/schwarzschild".
+[Sun Feb 14 13:08:26 2016] [debug] Routing to controller "WebApp::Misc" and action "schwarzschild".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "misc/schwarzschild.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "layouts/head.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "layouts/header.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "layouts/body.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Sun Feb 14 13:08:26 2016] [debug] 200 OK (0.069712s, 14.345/s).
+[Sun Feb 14 13:08:29 2016] [debug] GET "/misc/calculate_schwarzschild_radius/404".
+[Sun Feb 14 13:08:29 2016] [debug] Routing to controller "WebApp::Misc" and action "calculate_schwarzschild_radius".
+[Sun Feb 14 13:08:29 2016] [debug] 200 OK (0.002035s, 491.400/s).
+[Sun Feb 14 13:19:53 2016] [debug] GET "/misc/tetris".
+[Sun Feb 14 13:19:53 2016] [debug] Routing to controller "WebApp::Misc" and action "tetris".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering template "misc/tetris.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] Rendering cached template "layouts/footer.html.ep".
+[Sun Feb 14 13:19:53 2016] [debug] 200 OK (0.010533s, 94.940/s).
+[Sun Feb 14 13:19:55 2016] [debug] GET "/maps/borisbikes".
+[Sun Feb 14 13:19:55 2016] [debug] Routing to controller "WebApp::Maps" and action "borisbikes".
+[Sun Feb 14 13:19:55 2016] [error] Failed to get station data, debug file: tfl_debug.xml does not exist! at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/WebService/BorisBikes.pm line 429.
+	WebService::BorisBikes::_get_station_data('WebService::BorisBikes=HASH(0x7f9e5a1eca70)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/WebService/BorisBikes.pm line 364
+	WebService::BorisBikes::_refresh_stations('WebService::BorisBikes=HASH(0x7f9e5a1eca70)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/WebService/BorisBikes.pm line 82
+	WebService::BorisBikes::new('WebService::BorisBikes', 'HASH(0x7f9e5b6e4a70)') called at /Users/victor/Documents/github/web_app/script/../lib/WebApp/Maps.pm line 56
+	WebApp::Maps::borisbikes('WebApp::Maps=HASH(0x7f9e5cb342c0)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious.pm line 125
+	Mojolicious::__ANON__(undef, 'WebApp::Maps=HASH(0x7f9e5cb342c0)', 'CODE(0x7f9e5c9c8958)', 1) called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Plugins.pm line 20
+	Mojolicious::Plugins::__ANON__() called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Plugins.pm line 23
+	Mojolicious::Plugins::emit_chain('Mojolicious::Plugins=HASH(0x7f9e5c9ab240)', 'around_action', 'WebApp::Maps=HASH(0x7f9e5cb342c0)', 'CODE(0x7f9e5c9c8958)', 1) called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Routes.pm line 107
+	Mojolicious::Routes::_action('WebApp=HASH(0x7f9e5a1d0488)', 'WebApp::Maps=HASH(0x7f9e5cb342c0)', 'CODE(0x7f9e5c9c8958)', 1) called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Routes.pm line 195
+	Mojolicious::Routes::_controller('Mojolicious::Routes=HASH(0x7f9e5c9aacd0)', 'Mojolicious::Controller=HASH(0x7f9e5c9c8bc8)', 'HASH(0x7f9e5c9c88e0)', 1) called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Routes.pm line 44
+	Mojolicious::Routes::continue('Mojolicious::Routes=HASH(0x7f9e5c9aacd0)', 'Mojolicious::Controller=HASH(0x7f9e5c9c8bc8)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Routes.pm line 52
+	Mojolicious::Routes::dispatch('Mojolicious::Routes=HASH(0x7f9e5c9aacd0)', 'Mojolicious::Controller=HASH(0x7f9e5c9c8bc8)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious.pm line 117
+	Mojolicious::dispatch('WebApp=HASH(0x7f9e5a1d0488)', 'Mojolicious::Controller=HASH(0x7f9e5c9c8bc8)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious.pm line 126
+	Mojolicious::__ANON__(undef, 'Mojolicious::Controller=HASH(0x7f9e5c9c8bc8)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Plugins.pm line 20
+	Mojolicious::Plugins::__ANON__() called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious.pm line 198
+	eval {...} called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious.pm line 198
+	Mojolicious::_exception('CODE(0x7f9e5c9c8538)', 'Mojolicious::Controller=HASH(0x7f9e5c9c8bc8)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Plugins.pm line 20
+	Mojolicious::Plugins::__ANON__() called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious/Plugins.pm line 23
+	Mojolicious::Plugins::emit_chain('Mojolicious::Plugins=HASH(0x7f9e5c9ab240)', 'around_dispatch', 'Mojolicious::Controller=HASH(0x7f9e5c9c8bc8)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojolicious.pm line 132
+	Mojolicious::handler('WebApp=HASH(0x7f9e5a1d0488)', 'Mojo::Transaction::HTTP=HASH(0x7f9e5c9c7f08)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Server.pm line 65
+	Mojo::Server::__ANON__('Mojo::Server::Daemon=HASH(0x7f9e5a960398)', 'Mojo::Transaction::HTTP=HASH(0x7f9e5c9c7f08)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/EventEmitter.pm line 15
+	Mojo::EventEmitter::emit('Mojo::Server::Daemon=HASH(0x7f9e5a960398)', 'request', 'Mojo::Transaction::HTTP=HASH(0x7f9e5c9c7f08)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Server/Daemon.pm line 86
+	Mojo::Server::Daemon::__ANON__('Mojo::Transaction::HTTP=HASH(0x7f9e5c9c7f08)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/EventEmitter.pm line 15
+	Mojo::EventEmitter::emit('Mojo::Transaction::HTTP=HASH(0x7f9e5c9c7f08)', 'request') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Transaction/HTTP.pm line 65
+	Mojo::Transaction::HTTP::server_read('Mojo::Transaction::HTTP=HASH(0x7f9e5c9c7f08)', 'GET /maps/borisbikes HTTP/1.1\x{d}\x{a}Host: 127.0.0.1:3000\x{d}\x{a}Connecti...') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Server/Daemon.pm line 189
+	Mojo::Server::Daemon::_read('Mojo::Server::Daemon=HASH(0x7f9e5a960398)', '94650bd72240d88a8d8620e2269cc09a', 'GET /maps/borisbikes HTTP/1.1\x{d}\x{a}Host: 127.0.0.1:3000\x{d}\x{a}Connecti...') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Server/Daemon.pm line 169
+	Mojo::Server::Daemon::__ANON__('Mojo::IOLoop::Stream=HASH(0x7f9e5cb44968)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/EventEmitter.pm line 33
+	eval {...} called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/EventEmitter.pm line 33
+	Mojo::EventEmitter::emit_safe('Mojo::IOLoop::Stream=HASH(0x7f9e5cb44968)', 'read', 'GET /maps/borisbikes HTTP/1.1\x{d}\x{a}Host: 127.0.0.1:3000\x{d}\x{a}Connecti...') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/IOLoop/Stream.pm line 116
+	Mojo::IOLoop::Stream::_read('Mojo::IOLoop::Stream=HASH(0x7f9e5cb44968)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/IOLoop/Stream.pm line 53
+	Mojo::IOLoop::Stream::__ANON__('Mojo::Reactor::Poll=HASH(0x7f9e5ad717f0)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Reactor/Poll.pm line 111
+	eval {...} called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Reactor/Poll.pm line 111
+	Mojo::Reactor::Poll::_sandbox('Mojo::Reactor::Poll=HASH(0x7f9e5ad717f0)', 'Read', 'CODE(0x7f9e5b443788)', 0) called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Reactor/Poll.pm line 46
+	Mojo::Reactor::Poll::one_tick('Mojo::Reactor::Poll=HASH(0x7f9e5ad717f0)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Reactor/Poll.pm line 88
+	Mojo::Reactor::Poll::start('Mojo::Reactor::Poll=HASH(0x7f9e5ad717f0)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/IOLoop.pm line 130
+	Mojo::IOLoop::start('Mojo::IOLoop=HASH(0x7f9e5ab28c90)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Server/Morbo.pm line 100
+	Mojo::Server::Morbo::_spawn('Mojo::Server::Morbo=HASH(0x7f9e5a0287f0)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Server/Morbo.pm line 73
+	Mojo::Server::Morbo::_manage('Mojo::Server::Morbo=HASH(0x7f9e5a0287f0)') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.1/Mojo/Server/Morbo.pm line 46
+	Mojo::Server::Morbo::run('Mojo::Server::Morbo=HASH(0x7f9e5a0287f0)', 'script/web_app') called at /Users/victor/perl5/perlbrew/perls/perl-5.18.1/bin/morbo line 28
+
+[Sun Feb 14 13:19:55 2016] [debug] Template "exception.development.html.ep" not found.
+[Sun Feb 14 13:19:55 2016] [debug] Template "exception.html.ep" not found.
+[Sun Feb 14 13:19:55 2016] [debug] Rendering inline template "569839bd27413e47e26c8476bacb2540".
+[Sun Feb 14 13:19:55 2016] [debug] Rendering inline template "4fcf2af99f1803a7a26c2e9b04430f8c".
+[Sun Feb 14 13:19:55 2016] [debug] 500 Internal Server Error (0.237714s, 4.207/s).

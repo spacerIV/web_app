@@ -23,6 +23,9 @@ sub calculate_schwarzschild_radius {
  
     my $answer = 2 * GRAVITATIONAL * $mass / LIGHT_SPEED ** 2;
 
+    warn "Question: 2 * GRAVITATIONAL * $mass / LIGHT_SPEED ** 2";
+    warn "Answer: $answer";
+
     $answer =~ s/e-(\d+)$/ x 10 <sup>-$1<\/sup>/; 
 
     $self->render( json => { schwarzschild_radius => $answer } );
