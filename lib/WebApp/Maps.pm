@@ -53,7 +53,7 @@ sub get_weather {
 sub borisbikes {
     my $self = shift;
 
-    $BB = WebService::BorisBikes->new( { refresh_rate => 120 } ) 
+    $BB = WebService::BorisBikes->new( { refresh_rate => 120, debug_filename => 'tfl_debug.xml' } ) 
         unless defined $BB && $BB->isa( 'WebService::BorisBikes' );
 
     my $stations = $BB->get_all_stations;
@@ -95,7 +95,7 @@ sub borisbikes {
 sub get_bb_station_info {
     my $self = shift;
 
-    $BB = WebService::BorisBikes->new( { refresh_rate => 120 } ) 
+    $BB = WebService::BorisBikes->new( { refresh_rate => 120, debug_filename => 'tfl_debug.xml' } ) 
         unless defined $BB && $BB->isa( 'WebService::BorisBikes' );
 
     my $s = $BB->get_station_by_id( $self->param( 'station_id' ) );
