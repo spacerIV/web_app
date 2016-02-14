@@ -8,7 +8,6 @@ WriteMakefile(
   PREREQ_PM => {
       'Mojolicious'                          => '5.08',
       'DBIx::Class::Schema'                  => 0,
-      'DateTime::Fiction::JRRTolkien::Shire' => '0.02',
       'JSON::XS'                             => '2.32',
       'LWP::Simple'                          => '6.00',
       'XML::Simple'                          => '2.20',
