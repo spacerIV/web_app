@@ -1,4 +1,6 @@
-                <!-- sidebar: style can be found in sidebar.less -->
+</div> <!-- FIXME, DONT KNOW WHERE THIS SHOULD GO -->
+
+<aside class="main-sidebar">
 
                 <section class="sidebar">
 
@@ -24,6 +26,20 @@
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li> 
+
+                        <!-- Chess -->
+
+                        <li class="treeview <% if ( &url_for =~ /chess\// ) { %> active <% } %>">
+                            <a href="#">
+                                <b style="font-size:120%;">&#9812;</b>
+                                    <span>&nbsp;&nbsp;&nbsp;Chess</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li<% if ( &url_for =~ /chess\/paste/ ) { %> class="active" <% } %>><a href="/chess/paste"><i class="fa fa-angle-double-right"></i> Paste</a></li>
+                                <li<% if ( &url_for =~ /chess\/analyse/ ) { %> class="active" <% } %>><a href="/chess/analyse"><i class="fa fa-angle-double-right"></i> Analyse</a></li>
+                            </ul>
+                        </li>
 
                         <!-- Maps -->
 
@@ -59,3 +75,4 @@
                 </section>
 
                 <!-- /.sidebar -->
+              </aside>

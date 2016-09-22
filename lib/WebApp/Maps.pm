@@ -14,6 +14,7 @@ sub weather {
 
     $self->render( title => 'Weather',
                    msg   => 'Weather', 
+                   icon  => '<i class="fa fa-globe"></i>',
                    blurb => 'click somewhere to show live weather' );
 }
 
@@ -87,6 +88,7 @@ sub borisbikes {
             title      => 'Boris Bikes',
             msg        => 'Boris Bikes',
             blurb      => '',
+            icon       => '<i class="fa fa-globe"></i>',
             success    => $success, 
             stations   => $data, 
     );

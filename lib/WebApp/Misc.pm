@@ -13,6 +13,7 @@ sub schwarzschild {
 
     $self->render( title => 'Schwarzschild Radius', 
                    msg   => 'Schwarzschild Radius', 
+                   icon  => '<i class="fa fa-coffee"></i>',
                    blurb => '' ),
 }
 
@@ -36,6 +37,7 @@ sub tetris {
 
     $self->render( title => 'WebGL Tetris', 
                    msg   => 'WebGL Tetris', 
+                   icon  => '<i class="fa fa-coffee"></i>',
                    blurb => 'Ported from C & OpenGL to Javascript using Emscripten' ),
 }
 
@@ -48,6 +50,7 @@ sub csrf {
     unless ( defined $city ) {
         $self->render( title => 'CSRF', 
                        msg   => 'CSRF', 
+                       icon  => '<i class="fa fa-coffee"></i>',
                        blurb => 'This form contains a hidden csrf token', );
         return;
      }
@@ -62,6 +65,7 @@ sub csrf {
 
     $self->render( title => 'CSRF', 
                    msg   => 'CSRF', 
+                   icon  => '<i class="fa fa-coffee"></i>',
                    text  => "Low orbit ion cannon pointed at $city!" )
         unless $validation->has_error;
 }

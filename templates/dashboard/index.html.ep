@@ -1,3 +1,15 @@
 % layout 'dashboard';
 
 % title 'Welcome';
+
+
+<div class="col-md-12">
+  <div class="alert alert-warning">
+    <h4><i class="icon fa fa-warning"></i> This page is under construction!</h4>
+  </div>
+</div>
+
+        <center><img src="/img/underconstruction/luvsisqounderconstruction_rotating_triangle.gif"></center>
+
+<img style="position: absolute; right: 0px; bottom: 0px;" src="/img/underconstruction/best_viewed_with_ie_or_netscape.jpg">
+

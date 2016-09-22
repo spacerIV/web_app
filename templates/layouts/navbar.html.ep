@@ -1,6 +1,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
+                        <%== $icon %>
                         <%= $msg %>
                         <small><%= $blurb %></small>
                     </h1>
@@ -10,6 +11,15 @@
 % if ( &url_for =~ /^\/$/ ) { 
                             <li class="active">dashboard</li>
 % } 
+% if ( &url_for =~ /chess/ ) { 
+                        <li><a href="#">chess</a></li>
+% } 
+% if ( &url_for =~ /chess\/paste/ ) { 
+                        <li><a href="#">paste</a></li>
+% }
+% if ( &url_for =~ /chess\/analyse/ ) { 
+                        <li><a href="#">analyse</a></li>
+% }
 % if ( &url_for =~ /maps/ ) { 
                         <li><a href="#">maps</a></li>
 % } 
@@ -30,15 +40,6 @@
 % }
 % if ( &url_for =~ /misc\/csrf/ ) { 
                         <li><a href="#">csrf</a></li>
-% }
-% if ( &url_for =~ /charts\/morris/ ) { 
-                        <li><a href="#">morris</a></li>
-% }
-% if ( &url_for =~ /charts\/flot/ ) { 
-                        <li><a href="#">flot</a></li>
-% }
-% if ( &url_for =~ /charts\/inline/ ) { 
-                        <li><a href="#">inline</a></li>
 % }
                     </ol>
                 </section>

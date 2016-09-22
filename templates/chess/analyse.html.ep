@@ -1,0 +1,30 @@
+% layout 'dashboard';
+
+% title 'Analyse';
+
+<script src="/chessboardjs/js/chessboard-0.3.0.js"></script>
+<link rel="stylesheet" href="/chessboardjs/css/chessboard-0.3.0.css" />
+
+<script>
+    var init = function() {
+
+    //--- start example JS ---
+    var cfg = {
+      showNotation: false,
+      position: 'start'
+    };
+    var board = ChessBoard('board', cfg);
+    //--- end example JS ---
+    
+    }; // end init()
+    $(document).ready(init);
+
+</script>
+
+    <div class="col-md-6">
+      <div class="box box-primary">
+        <div class="box-body">
+          <div id="board" style="width: 600px; height=400px"></div>
+        </div>
+      </div>
+    </div>
