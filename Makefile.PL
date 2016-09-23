@@ -21,6 +21,9 @@ WriteMakefile(
       'Data::Dumper'                         => 0,
       'HTML::Entities'                       => 0,
       'Astro::Constants'                     => 0,
+      'JSON'                                 => 0,
+      'IO::Async::Process'                   => 0,
+      'IO::Async::Loop'                      => 0,
   },
   test      => {TESTS => 't/*.t'}
 );

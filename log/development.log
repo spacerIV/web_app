@@ -48509,3 +48509,55 @@ Compilation failed in require at (eval 269) line 1.
 [Fri Sep 23 21:25:43 2016] [debug] GET "/chess/vsstockfish/ws".
 [Fri Sep 23 21:25:43 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
 [Fri Sep 23 21:25:43 2016] [debug] 101 Switching Protocols (0.028205s, 35.455/s).
+[Fri Sep 23 21:25:58 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:25:58 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:25:58 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:25:58 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:26:13 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:26:13 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:26:13 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:26:13 2016] [debug] 101 Switching Protocols (0.000546s, 1831.502/s).
+[Fri Sep 23 21:26:28 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:26:28 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:26:28 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:26:28 2016] [debug] 101 Switching Protocols (0.000390s, 2564.103/s).
+[Fri Sep 23 21:26:43 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:26:44 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:26:44 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:26:44 2016] [debug] 101 Switching Protocols (0.000529s, 1890.359/s).
+[Fri Sep 23 21:26:59 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:26:59 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:26:59 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:26:59 2016] [debug] 101 Switching Protocols (0.000515s, 1941.748/s).
+[Fri Sep 23 21:27:14 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:27:14 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:27:14 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:27:14 2016] [debug] 101 Switching Protocols (0.000518s, 1930.502/s).
+[Fri Sep 23 21:27:29 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:27:29 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:27:29 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:27:29 2016] [debug] 101 Switching Protocols (0.000497s, 2012.072/s).
+[Fri Sep 23 21:27:44 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:27:44 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:27:44 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:27:44 2016] [debug] 101 Switching Protocols (0.000567s, 1763.668/s).
+[Fri Sep 23 21:27:59 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:27:59 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:27:59 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:27:59 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:28:14 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:28:14 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:28:14 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:28:14 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:28:20 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:28:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:28:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:28:20 2016] [debug] 101 Switching Protocols (0.053541s, 18.677/s).
+[Fri Sep 23 21:28:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:28:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:28:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:28:35 2016] [debug] 101 Switching Protocols (0.000516s, 1937.984/s).
+[Fri Sep 23 21:28:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:28:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:28:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:28:50 2016] [debug] 101 Switching Protocols (0.000520s, 1923.077/s).
