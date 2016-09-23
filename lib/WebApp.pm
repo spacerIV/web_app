@@ -23,6 +23,11 @@ sub startup {
     # chess analyse
     $r->route( '/chess/analyse' )->to( 'chess#analyse' );
 
+    # chess vsstockfish
+    $r->route( '/chess/vsstockfish' )->to( 'chess#vsstockfish' );
+
+    $r->websocket('/chess/vsstockfish/*ws')->to('chess#ws');
+
     # maps weather
     $r->route( '/maps/weather' )->to( 'maps#weather' );
     $r->route( '/maps/getweather/*location' )->to( 'maps#get_weather' );

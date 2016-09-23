@@ -1,0 +1,210 @@
+% layout 'dashboard';
+
+% title 'Analyse';
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.js"></script>
+<script src="/chessboardjs/js/chessboard-0.3.0.js"></script>
+<link rel="stylesheet" href="/chessboardjs/css/chessboard-0.3.0.css" />
+
+<script src="/dashboard/js/plugins/bootstrap-slider/bootstrap-slider.js"></script>
+<link rel="stylesheet" href="/dashboard/css/bootstrap-slider/slider.css" />
+
+<script>
+
+  var board, game = new Chess();
+  var ucinewgame = 0;
+
+  // do not pick up pieces if the game is over only pick up pieces for White
+  var onDragStart = function(source, piece, position, orientation) {
+    if (game.in_checkmate() === true || game.in_draw() === true ||
+      piece.search(/^b/) !== -1) {
+      return false;
+    }
+  };
+  
+  var makeRandomMove = function() {
+    var possibleMoves = game.moves();
+  
+    // game over
+    if (possibleMoves.length === 0) return;
+  
+    var randomIndex = Math.floor(Math.random() * possibleMoves.length);
+    game.move(possibleMoves[randomIndex]);
+    board.position(game.fen());
+    $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
+  };
+  
+  var onDrop = function(source, target) {
+    // see if the move is legal
+    var move = game.move({
+      from: source,
+      to: target,
+      promotion: 'q' // NOTE: always promote to a queen for example simplicity
+    });
+  
+    // illegal move
+    if (move === null) return 'snapback';
+  
+    // make random legal move for black
+    window.setTimeout(makeRandomMove, 250);
+  };
+
+  // update the board position after the piece snap for castling, en passant, pawn promotion
+  var onSnapEnd = function() {
+    board.position(game.fen());
+    ws.send(JSON.stringify(game.pgn()));
+  };
+
+  var init = function() {
+
+    var cfg = {
+      draggable: true,
+      position: 'start',
+      onDragStart: onDragStart,
+      onDrop: onDrop,
+      onSnapEnd: onSnapEnd
+    };
+
+    board = ChessBoard('board', cfg);
+
+    setupWebSocket(1);
+  }; 
+
+  $(document).ready(init);
+
+  function setupWebSocket(firsttime){
+    var url = '<%= url_for('chess/vsstockfish/ws')->to_abs %>';
+    url = url.replace('http','ws');
+    ws = new WebSocket( url );
+
+    // get from server
+    ws.onmessage = function(e){
+      var point = JSON.parse(e.data);
+      console.log('from server : ' + point.data);
+      $('#io').append(point.data + '\n'); 
+      $('#io').scrollTop($('#io')[0].scrollHeight);
+    };
+
+    // on connection
+    ws.onopen = function(e) {
+      if (firsttime) {
+        ws.send(JSON.stringify('Hello server'));
+      }
+    }
+
+    // open a new one when closed
+    ws.onclose = function(){
+      setTimeout(setupWebSocket(0), 1000);
+    };
+  }
+
+</script>
+
+
+  <div class="col-md-5">
+    <div class="box box-primary">
+      <div class="box-body">
+        <div id="board" style="width: 520px; height=400px"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-7">
+    <div class="nav-tabs-custom">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab_1" data-toggle="tab">Stockfish</a></li>
+        <li><a href="#tab_2" data-toggle="tab">PGN</a></li>
+        <li><a href="#tab_3" data-toggle="tab">IO</a></li>
+        <li><a href="#tab_4" data-toggle="tab">Chart</a></li>
+      </ul>
+      <div class="tab-content">
+
+        <div class="tab-pane active" id="tab_1">
+        
+<!--- TAB ONE --->
+
+          <div class="box box-default">
+            <div class="box-body">
+
+              <p><span>Threads : <span id="slider1val">2</span><center><input id="slider1" style="width: 85% !important; background: green;" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="2"/></center></span></p>
+
+              <br>
+          
+              <p>Hash (MB) : <span id="slider2val">2048</span><center><input id="slider2" style="width: 85% !important; background: green;" type="text" data-slider-min="1" data-slider-max="4096" data-slider-step="1" data-slider-value="2048"/></center></span> </p>
+
+              <br>
+          
+              <p>Contempt : <span id="slider3val">0</span><center><input id="slider3" style="width: 85% !important; background: green;" type="text" data-slider-min="-100" data-slider-max="100" data-slider-step="1" data-slider-value="0"/></center></span> </p>
+
+              <br>
+          
+              <p>Skill : <span id="slider4val">10</span><center><input id="slider4" style="width: 85% !important; background: green;" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="10"/></center></span> </p>
+
+              <script>
+                  $("#slider1").slider();
+                  $("#slider1").on("slide", function(slideEvt) {
+                      $("#slider1val").text(slideEvt.value);
+                  });
+
+                  $("#slider2").slider();
+                  $("#slider2").on("slide", function(slideEvt) {
+                      $("#slider2val").text(slideEvt.value);
+                  });
+
+                  $("#slider3").slider();
+                  $("#slider3").on("slide", function(slideEvt) {
+                      $("#slider3val").text(slideEvt.value);
+                  });
+
+                  $("#slider4").slider();
+                  $("#slider4").on("slide", function(slideEvt) {
+                      $("#slider4val").text(slideEvt.value);
+                  });
+              </script>
+              <style>
+                   .slider-selection {
+                      background: #428041;
+                  }
+                   .slider-handle {
+                      background: green;
+                  }
+              </style>
+
+             </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tab_2">
+
+<!--- TAB TWO --->
+
+          <div class="form-group">
+            <textarea id="pgn" class="form-control" rows="24" readonly></textarea>
+          </div>
+
+        </div>
+
+        <div class="tab-pane" id="tab_3">
+
+<!--- TAB THREE --->
+
+          <div class="form-group">
+            <textarea id="io" class="form-control" rows="24" readonly></textarea>
+          </div>
+
+        </div>
+
+        <div class="tab-pane" id="tab_4">
+
+<!--- TAB FOUR --->
+
+        </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+

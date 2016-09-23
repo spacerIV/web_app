@@ -20,6 +20,9 @@
 % if ( &url_for =~ /chess\/analyse/ ) { 
                         <li><a href="#">analyse</a></li>
 % }
+% if ( &url_for =~ /chess\/play/ ) { 
+                        <li><a href="#">play</a></li>
+% }
 % if ( &url_for =~ /maps/ ) { 
                         <li><a href="#">maps</a></li>
 % } 
