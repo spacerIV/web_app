@@ -48561,3 +48561,983 @@ Compilation failed in require at (eval 269) line 1.
 [Fri Sep 23 21:28:50 2016] [debug] GET "/chess/vsstockfish/ws".
 [Fri Sep 23 21:28:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
 [Fri Sep 23 21:28:50 2016] [debug] 101 Switching Protocols (0.000520s, 1923.077/s).
+[Fri Sep 23 21:29:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:29:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:29:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:29:05 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:29:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:29:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:29:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:29:20 2016] [debug] 101 Switching Protocols (0.000527s, 1897.533/s).
+[Fri Sep 23 21:29:27 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:29:27 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:29:27 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:29:27 2016] [debug] 101 Switching Protocols (0.026464s, 37.787/s).
+[Fri Sep 23 21:29:31 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:29:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:29:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:29:31 2016] [debug] 101 Switching Protocols (0.029634s, 33.745/s).
+[Fri Sep 23 21:29:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:29:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:29:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:29:46 2016] [debug] 101 Switching Protocols (0.000517s, 1934.236/s).
+[Fri Sep 23 21:30:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:30:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:30:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:30:01 2016] [debug] 101 Switching Protocols (0.000528s, 1893.939/s).
+[Fri Sep 23 21:30:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:30:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:30:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:30:16 2016] [debug] 101 Switching Protocols (0.000726s, 1377.410/s).
+[Fri Sep 23 21:30:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:30:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:30:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:30:31 2016] [debug] 101 Switching Protocols (0.000520s, 1923.077/s).
+[Fri Sep 23 21:30:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:30:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:30:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:30:46 2016] [debug] 101 Switching Protocols (0.000531s, 1883.239/s).
+[Fri Sep 23 21:30:53 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:30:53 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:30:53 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:30:53 2016] [debug] 101 Switching Protocols (0.053422s, 18.719/s).
+[Fri Sep 23 21:31:02 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:31:02 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:02 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:02 2016] [debug] 101 Switching Protocols (0.026885s, 37.195/s).
+[Fri Sep 23 21:31:09 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:31:09 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:09 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:09 2016] [debug] 101 Switching Protocols (0.023962s, 41.733/s).
+[Fri Sep 23 21:31:18 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:31:18 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:18 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:18 2016] [debug] 101 Switching Protocols (0.023987s, 41.689/s).
+[Fri Sep 23 21:31:21 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 21:31:21 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:31:21 2016] [debug] 200 OK (0.062126s, 16.096/s).
+[Fri Sep 23 21:31:21 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:21 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:21 2016] [debug] 101 Switching Protocols (0.000876s, 1141.553/s).
+[Fri Sep 23 21:31:36 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:31:36 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:36 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:36 2016] [debug] 101 Switching Protocols (0.030844s, 32.421/s).
+[Fri Sep 23 21:31:36 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 21:31:36 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:31:36 2016] [debug] 200 OK (0.043536s, 22.969/s).
+[Fri Sep 23 21:31:36 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:36 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:36 2016] [debug] 101 Switching Protocols (0.000774s, 1291.990/s).
+[Fri Sep 23 21:31:45 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 21:31:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:45 2016] [debug] 101 Switching Protocols (0.034953s, 28.610/s).
+[Fri Sep 23 21:31:46 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 21:31:46 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:31:46 2016] [debug] 200 OK (0.044362s, 22.542/s).
+[Fri Sep 23 21:31:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:31:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:31:46 2016] [debug] 101 Switching Protocols (0.000831s, 1203.369/s).
+[Fri Sep 23 21:32:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:32:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:32:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:32:35 2016] [debug] 101 Switching Protocols (0.000579s, 1727.116/s).
+[Fri Sep 23 21:32:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:32:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:32:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:32:50 2016] [debug] 101 Switching Protocols (0.000526s, 1901.141/s).
+[Fri Sep 23 21:33:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:33:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:33:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:33:05 2016] [debug] 101 Switching Protocols (0.000522s, 1915.709/s).
+[Fri Sep 23 21:33:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:33:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:33:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:33:20 2016] [debug] 101 Switching Protocols (0.000527s, 1897.533/s).
+[Fri Sep 23 21:33:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:33:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:33:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:33:35 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
+[Fri Sep 23 21:33:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:33:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:33:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:33:50 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:34:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:34:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:34:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:34:05 2016] [debug] 101 Switching Protocols (0.000522s, 1915.709/s).
+[Fri Sep 23 21:34:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:34:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:34:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:34:20 2016] [debug] 101 Switching Protocols (0.000523s, 1912.046/s).
+[Fri Sep 23 21:34:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:34:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:34:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:34:35 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:34:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:34:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:34:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:34:50 2016] [debug] 101 Switching Protocols (0.000527s, 1897.533/s).
+[Fri Sep 23 21:35:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:35:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:35:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:35:05 2016] [debug] 101 Switching Protocols (0.000523s, 1912.046/s).
+[Fri Sep 23 21:35:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:35:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:35:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:35:20 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:35:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:35:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:35:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:35:35 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
+[Fri Sep 23 21:35:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:35:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:35:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:35:50 2016] [debug] 101 Switching Protocols (0.000522s, 1915.709/s).
+[Fri Sep 23 21:36:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:36:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:36:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:36:05 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:36:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:36:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:36:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:36:20 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:36:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:36:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:36:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:36:35 2016] [debug] 101 Switching Protocols (0.000520s, 1923.077/s).
+[Fri Sep 23 21:36:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:36:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:36:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:36:50 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:37:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:37:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:37:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:37:05 2016] [debug] 101 Switching Protocols (0.000523s, 1912.046/s).
+[Fri Sep 23 21:37:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:37:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:37:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:37:20 2016] [debug] 101 Switching Protocols (0.000522s, 1915.709/s).
+[Fri Sep 23 21:37:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:37:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:37:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:37:35 2016] [debug] 101 Switching Protocols (0.000522s, 1915.709/s).
+[Fri Sep 23 21:37:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:37:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:37:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:37:50 2016] [debug] 101 Switching Protocols (0.000813s, 1230.012/s).
+[Fri Sep 23 21:38:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:38:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:38:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:38:05 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:38:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:38:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:38:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:38:20 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 21:38:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:38:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:38:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:38:35 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:38:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:38:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:38:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:38:50 2016] [debug] 101 Switching Protocols (0.000519s, 1926.782/s).
+[Fri Sep 23 21:39:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:39:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:39:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:39:05 2016] [debug] 101 Switching Protocols (0.000381s, 2624.672/s).
+[Fri Sep 23 21:39:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:39:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:39:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:39:20 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:39:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:39:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:39:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:39:35 2016] [debug] 101 Switching Protocols (0.000523s, 1912.046/s).
+[Fri Sep 23 21:39:50 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:39:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:39:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:39:50 2016] [debug] 101 Switching Protocols (0.000523s, 1912.046/s).
+[Fri Sep 23 21:40:05 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:40:05 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:40:05 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:40:05 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:40:20 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:40:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:40:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:40:20 2016] [debug] 101 Switching Protocols (0.000526s, 1901.141/s).
+[Fri Sep 23 21:40:35 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:40:35 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:40:35 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:40:35 2016] [debug] 101 Switching Protocols (0.000519s, 1926.782/s).
+[Fri Sep 23 21:40:41 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 21:40:41 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering cached template "chess/vsstockfish.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:40:41 2016] [debug] 200 OK (0.011203s, 89.262/s).
+[Fri Sep 23 21:40:42 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:40:42 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:40:42 2016] [debug] 101 Switching Protocols (0.000497s, 2012.072/s).
+[Fri Sep 23 21:40:43 2016] [debug] GET "/chess/analyse".
+[Fri Sep 23 21:40:43 2016] [debug] Routing to controller "WebApp::Chess" and action "analyse".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering template "chess/analyse.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:40:43 2016] [debug] 200 OK (0.023032s, 43.418/s).
+[Fri Sep 23 21:40:44 2016] [debug] GET "/chess/paste".
+[Fri Sep 23 21:40:44 2016] [debug] Routing to controller "WebApp::Chess" and action "paste".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering template "chess/paste.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:40:44 2016] [debug] 200 OK (0.023477s, 42.595/s).
+[Fri Sep 23 21:40:46 2016] [debug] GET "/maps/borisbikes".
+[Fri Sep 23 21:40:47 2016] [debug] Routing to controller "WebApp::Maps" and action "borisbikes".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "maps/borisbikes.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:40:48 2016] [debug] 200 OK (2.333245s, 0.429/s).
+[Fri Sep 23 21:40:54 2016] [debug] GET "/maps/get_bb_station_info/695".
+[Fri Sep 23 21:40:54 2016] [debug] Routing to controller "WebApp::Maps" and action "get_bb_station_info".
+[Fri Sep 23 21:40:54 2016] [debug] 200 OK (0.001693s, 590.667/s).
+[Fri Sep 23 21:40:58 2016] [debug] GET "/misc/schwarzschild".
+[Fri Sep 23 21:40:58 2016] [debug] Routing to controller "WebApp::Misc" and action "schwarzschild".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering template "misc/schwarzschild.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:40:58 2016] [debug] 200 OK (0.098407s, 10.162/s).
+[Fri Sep 23 21:41:01 2016] [debug] GET "/misc/calculate_schwarzschild_radius/67".
+[Fri Sep 23 21:41:01 2016] [debug] Routing to controller "WebApp::Misc" and action "calculate_schwarzschild_radius".
+[Fri Sep 23 21:41:01 2016] [debug] 200 OK (0.001110s, 900.901/s).
+[Fri Sep 23 21:41:14 2016] [debug] GET "/misc/calculate_schwarzschild_radius/60".
+[Fri Sep 23 21:41:14 2016] [debug] Routing to controller "WebApp::Misc" and action "calculate_schwarzschild_radius".
+[Fri Sep 23 21:41:14 2016] [debug] 200 OK (0.001536s, 651.042/s).
+[Fri Sep 23 21:41:25 2016] [debug] GET "/misc/calculate_schwarzschild_radius/1988550000000000000000000000000".
+[Fri Sep 23 21:41:25 2016] [debug] Routing to controller "WebApp::Misc" and action "calculate_schwarzschild_radius".
+[Fri Sep 23 21:41:25 2016] [debug] 200 OK (0.001228s, 814.332/s).
+[Fri Sep 23 21:42:08 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 21:42:08 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering cached template "chess/vsstockfish.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 21:42:08 2016] [debug] 200 OK (0.007523s, 132.926/s).
+[Fri Sep 23 21:42:09 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:42:09 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:42:09 2016] [debug] 101 Switching Protocols (0.000637s, 1569.859/s).
+[Fri Sep 23 21:43:10 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:43:10 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:43:10 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:43:10 2016] [debug] 101 Switching Protocols (0.000531s, 1883.239/s).
+[Fri Sep 23 21:43:45 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:43:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:43:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:43:45 2016] [debug] 101 Switching Protocols (0.000532s, 1879.699/s).
+[Fri Sep 23 21:44:00 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:44:00 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:44:00 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:44:00 2016] [debug] 101 Switching Protocols (0.000544s, 1838.235/s).
+[Fri Sep 23 21:44:15 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:44:15 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:44:15 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:44:15 2016] [debug] 101 Switching Protocols (0.000543s, 1841.621/s).
+[Fri Sep 23 21:44:30 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:44:30 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:44:30 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:44:30 2016] [debug] 101 Switching Protocols (0.000332s, 3012.048/s).
+[Fri Sep 23 21:44:45 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:44:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:44:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:44:45 2016] [debug] 101 Switching Protocols (0.000406s, 2463.054/s).
+[Fri Sep 23 21:45:00 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:45:00 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:45:00 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:45:00 2016] [debug] 101 Switching Protocols (0.000529s, 1890.359/s).
+[Fri Sep 23 21:45:15 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:45:15 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:45:15 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:45:15 2016] [debug] 101 Switching Protocols (0.000558s, 1792.115/s).
+[Fri Sep 23 21:45:30 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:45:30 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:45:30 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:45:30 2016] [debug] 101 Switching Protocols (0.000713s, 1402.525/s).
+[Fri Sep 23 21:45:45 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:45:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:45:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:45:45 2016] [debug] 101 Switching Protocols (0.000550s, 1818.182/s).
+[Fri Sep 23 21:46:00 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:46:00 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:46:00 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:46:00 2016] [debug] 101 Switching Protocols (0.000526s, 1901.141/s).
+[Fri Sep 23 21:46:15 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:46:15 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:46:15 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:46:15 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
+[Fri Sep 23 21:46:30 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:46:30 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:46:30 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:46:30 2016] [debug] 101 Switching Protocols (0.000594s, 1683.502/s).
+[Fri Sep 23 21:46:45 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:46:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:46:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:46:45 2016] [debug] 101 Switching Protocols (0.000550s, 1818.182/s).
+[Fri Sep 23 21:47:00 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:47:00 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:47:00 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:47:00 2016] [debug] 101 Switching Protocols (0.000606s, 1650.165/s).
+[Fri Sep 23 21:47:15 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:47:15 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:47:15 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:47:15 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:47:30 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:47:30 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:47:30 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:47:30 2016] [debug] 101 Switching Protocols (0.000569s, 1757.469/s).
+[Fri Sep 23 21:47:45 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:47:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:47:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:47:45 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
+[Fri Sep 23 21:48:00 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:48:00 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:48:00 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:48:00 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
+[Fri Sep 23 21:48:15 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:48:15 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:48:15 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:48:15 2016] [debug] 101 Switching Protocols (0.000534s, 1872.659/s).
+[Fri Sep 23 21:48:30 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:48:30 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:48:30 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:48:30 2016] [debug] 101 Switching Protocols (0.000527s, 1897.533/s).
+[Fri Sep 23 21:48:45 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:48:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:48:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:48:45 2016] [debug] 101 Switching Protocols (0.000534s, 1872.659/s).
+[Fri Sep 23 21:49:00 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:49:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:49:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:49:01 2016] [debug] 101 Switching Protocols (0.000532s, 1879.699/s).
+[Fri Sep 23 21:49:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:49:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:49:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:49:16 2016] [debug] 101 Switching Protocols (0.000523s, 1912.046/s).
+[Fri Sep 23 21:49:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:49:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:49:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:49:31 2016] [debug] 101 Switching Protocols (0.000524s, 1908.397/s).
+[Fri Sep 23 21:49:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:49:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:49:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:49:46 2016] [debug] 101 Switching Protocols (0.000544s, 1838.235/s).
+[Fri Sep 23 21:50:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:50:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:50:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:50:01 2016] [debug] 101 Switching Protocols (0.000531s, 1883.239/s).
+[Fri Sep 23 21:50:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:50:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:50:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:50:16 2016] [debug] 101 Switching Protocols (0.000537s, 1862.197/s).
+[Fri Sep 23 21:50:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:50:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:50:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:50:31 2016] [debug] 101 Switching Protocols (0.000533s, 1876.173/s).
+[Fri Sep 23 21:50:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:50:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:50:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:50:46 2016] [debug] 101 Switching Protocols (0.000536s, 1865.672/s).
+[Fri Sep 23 21:51:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:51:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:51:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:51:01 2016] [debug] 101 Switching Protocols (0.000999s, 1001.001/s).
+[Fri Sep 23 21:51:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:51:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:51:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:51:16 2016] [debug] 101 Switching Protocols (0.000544s, 1838.235/s).
+[Fri Sep 23 21:51:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:51:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:51:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:51:31 2016] [debug] 101 Switching Protocols (0.000526s, 1901.141/s).
+[Fri Sep 23 21:51:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:51:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:51:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:51:46 2016] [debug] 101 Switching Protocols (0.000532s, 1879.699/s).
+[Fri Sep 23 21:52:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:52:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:52:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:52:01 2016] [debug] 101 Switching Protocols (0.000534s, 1872.659/s).
+[Fri Sep 23 21:52:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:52:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:52:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:52:16 2016] [debug] 101 Switching Protocols (0.000529s, 1890.359/s).
+[Fri Sep 23 21:52:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:52:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:52:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:52:31 2016] [debug] 101 Switching Protocols (0.000727s, 1375.516/s).
+[Fri Sep 23 21:52:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:52:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:52:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:52:46 2016] [debug] 101 Switching Protocols (0.000712s, 1404.494/s).
+[Fri Sep 23 21:53:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:53:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:53:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:53:01 2016] [debug] 101 Switching Protocols (0.000400s, 2500.000/s).
+[Fri Sep 23 21:53:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:53:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:53:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:53:16 2016] [debug] 101 Switching Protocols (0.000435s, 2298.851/s).
+[Fri Sep 23 21:53:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:53:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:53:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:53:31 2016] [debug] 101 Switching Protocols (0.000402s, 2487.562/s).
+[Fri Sep 23 21:53:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:53:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:53:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:53:46 2016] [debug] 101 Switching Protocols (0.000420s, 2380.952/s).
+[Fri Sep 23 21:54:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:54:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:54:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:54:01 2016] [debug] 101 Switching Protocols (0.000418s, 2392.344/s).
+[Fri Sep 23 21:54:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:54:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:54:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:54:16 2016] [debug] 101 Switching Protocols (0.000499s, 2004.008/s).
+[Fri Sep 23 21:54:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:54:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:54:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:54:31 2016] [debug] 101 Switching Protocols (0.000411s, 2433.090/s).
+[Fri Sep 23 21:54:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:54:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:54:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:54:46 2016] [debug] 101 Switching Protocols (0.000416s, 2403.846/s).
+[Fri Sep 23 21:55:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:55:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:55:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:55:01 2016] [debug] 101 Switching Protocols (0.000407s, 2457.002/s).
+[Fri Sep 23 21:55:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:55:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:55:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:55:16 2016] [debug] 101 Switching Protocols (0.000397s, 2518.892/s).
+[Fri Sep 23 21:55:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:55:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:55:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:55:31 2016] [debug] 101 Switching Protocols (0.000435s, 2298.851/s).
+[Fri Sep 23 21:55:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:55:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:55:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:55:46 2016] [debug] 101 Switching Protocols (0.000395s, 2531.646/s).
+[Fri Sep 23 21:56:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:56:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:56:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:56:01 2016] [debug] 101 Switching Protocols (0.000328s, 3048.780/s).
+[Fri Sep 23 21:56:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:56:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:56:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:56:16 2016] [debug] 101 Switching Protocols (0.000544s, 1838.235/s).
+[Fri Sep 23 21:56:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:56:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:56:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:56:31 2016] [debug] 101 Switching Protocols (0.000465s, 2150.538/s).
+[Fri Sep 23 21:56:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:56:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:56:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:56:46 2016] [debug] 101 Switching Protocols (0.000393s, 2544.529/s).
+[Fri Sep 23 21:57:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:57:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:57:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:57:01 2016] [debug] 101 Switching Protocols (0.000417s, 2398.082/s).
+[Fri Sep 23 21:57:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:57:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:57:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:57:16 2016] [debug] 101 Switching Protocols (0.000545s, 1834.862/s).
+[Fri Sep 23 21:57:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:57:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:57:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:57:31 2016] [debug] 101 Switching Protocols (0.000395s, 2531.646/s).
+[Fri Sep 23 21:57:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:57:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:57:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:57:46 2016] [debug] 101 Switching Protocols (0.000451s, 2217.295/s).
+[Fri Sep 23 21:58:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:58:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:58:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:58:01 2016] [debug] 101 Switching Protocols (0.000329s, 3039.514/s).
+[Fri Sep 23 21:58:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:58:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:58:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:58:16 2016] [debug] 101 Switching Protocols (0.000568s, 1760.563/s).
+[Fri Sep 23 21:58:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:58:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:58:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:58:31 2016] [debug] 101 Switching Protocols (0.000760s, 1315.789/s).
+[Fri Sep 23 21:58:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:58:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:58:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:58:46 2016] [debug] 101 Switching Protocols (0.000528s, 1893.939/s).
+[Fri Sep 23 21:59:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:59:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:59:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:59:01 2016] [debug] 101 Switching Protocols (0.000531s, 1883.239/s).
+[Fri Sep 23 21:59:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:59:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:59:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:59:16 2016] [debug] 101 Switching Protocols (0.000538s, 1858.736/s).
+[Fri Sep 23 21:59:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:59:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:59:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:59:31 2016] [debug] 101 Switching Protocols (0.000527s, 1897.533/s).
+[Fri Sep 23 21:59:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 21:59:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 21:59:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 21:59:46 2016] [debug] 101 Switching Protocols (0.000399s, 2506.266/s).
+[Fri Sep 23 22:00:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:00:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:00:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:00:01 2016] [debug] 101 Switching Protocols (0.000440s, 2272.727/s).
+[Fri Sep 23 22:00:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:00:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:00:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:00:16 2016] [debug] 101 Switching Protocols (0.000454s, 2202.643/s).
+[Fri Sep 23 22:00:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:00:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:00:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:00:31 2016] [debug] 101 Switching Protocols (0.000398s, 2512.563/s).
+[Fri Sep 23 22:00:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:00:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:00:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:00:46 2016] [debug] 101 Switching Protocols (0.000529s, 1890.359/s).
+[Fri Sep 23 22:01:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:01:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:01:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:01:01 2016] [debug] 101 Switching Protocols (0.000526s, 1901.141/s).
+[Fri Sep 23 22:01:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:01:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:01:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:01:16 2016] [debug] 101 Switching Protocols (0.000408s, 2450.980/s).
+[Fri Sep 23 22:01:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:01:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:01:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:01:31 2016] [debug] 101 Switching Protocols (0.001385s, 722.022/s).
+[Fri Sep 23 22:01:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:01:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:01:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:01:46 2016] [debug] 101 Switching Protocols (0.000528s, 1893.939/s).
+[Fri Sep 23 22:02:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:02:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:02:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:02:01 2016] [debug] 101 Switching Protocols (0.000691s, 1447.178/s).
+[Fri Sep 23 22:02:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:02:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:02:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:02:16 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
+[Fri Sep 23 22:02:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:02:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:02:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:02:31 2016] [debug] 101 Switching Protocols (0.000573s, 1745.201/s).
+[Fri Sep 23 22:02:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:02:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:02:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:02:46 2016] [debug] 101 Switching Protocols (0.000529s, 1890.359/s).
+[Fri Sep 23 22:03:01 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:03:01 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:03:01 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:03:01 2016] [debug] 101 Switching Protocols (0.000547s, 1828.154/s).
+[Fri Sep 23 22:03:16 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:03:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:03:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:03:16 2016] [debug] 101 Switching Protocols (0.000397s, 2518.892/s).
+[Fri Sep 23 22:03:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:03:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:03:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:03:31 2016] [debug] 101 Switching Protocols (0.000528s, 1893.939/s).
+[Fri Sep 23 22:03:46 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:03:46 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:03:46 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:03:46 2016] [debug] 101 Switching Protocols (0.000523s, 1912.046/s).
+[Fri Sep 23 22:03:54 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:03:54 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering cached template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:03:54 2016] [debug] 200 OK (0.011943s, 83.731/s).
+[Fri Sep 23 22:03:55 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:03:55 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:03:55 2016] [debug] 101 Switching Protocols (0.000521s, 1919.386/s).
+[Fri Sep 23 22:04:10 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:04:10 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:10 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:10 2016] [debug] 101 Switching Protocols (0.000552s, 1811.594/s).
+[Fri Sep 23 22:04:12 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:04:12 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:12 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:12 2016] [debug] 101 Switching Protocols (0.056230s, 17.784/s).
+[Fri Sep 23 22:04:15 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:04:15 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:04:15 2016] [debug] 200 OK (0.063065s, 15.857/s).
+[Fri Sep 23 22:04:16 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:16 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:16 2016] [debug] 101 Switching Protocols (0.000815s, 1226.994/s).
+[Fri Sep 23 22:04:31 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:04:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:31 2016] [debug] 101 Switching Protocols (0.000391s, 2557.545/s).
+[Fri Sep 23 22:04:39 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:04:39 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:39 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:39 2016] [debug] 101 Switching Protocols (0.044076s, 22.688/s).
+[Fri Sep 23 22:04:39 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:04:39 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:04:39 2016] [debug] 200 OK (0.057074s, 17.521/s).
+[Fri Sep 23 22:04:40 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:40 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:40 2016] [debug] 101 Switching Protocols (0.000414s, 2415.459/s).
+[Fri Sep 23 22:04:51 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:04:51 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:51 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:51 2016] [debug] 101 Switching Protocols (0.025251s, 39.602/s).
+[Fri Sep 23 22:04:53 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:04:53 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:04:53 2016] [debug] 200 OK (0.053815s, 18.582/s).
+[Fri Sep 23 22:04:53 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:53 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:53 2016] [debug] 101 Switching Protocols (0.000738s, 1355.014/s).
+[Fri Sep 23 22:04:58 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:04:58 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:04:58 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:04:58 2016] [debug] 101 Switching Protocols (0.025206s, 39.673/s).
+[Fri Sep 23 22:05:00 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:05:00 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:05:00 2016] [debug] 200 OK (0.054556s, 18.330/s).
+[Fri Sep 23 22:05:00 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:00 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:00 2016] [debug] 101 Switching Protocols (0.000605s, 1652.893/s).
+[Fri Sep 23 22:05:08 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:05:08 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:08 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:08 2016] [debug] 101 Switching Protocols (0.024534s, 40.760/s).
+[Fri Sep 23 22:05:10 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:05:10 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:05:10 2016] [debug] 200 OK (0.044169s, 22.640/s).
+[Fri Sep 23 22:05:11 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:11 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:11 2016] [debug] 101 Switching Protocols (0.000808s, 1237.624/s).
+[Fri Sep 23 22:05:12 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:05:12 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering cached template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:05:12 2016] [debug] 200 OK (0.010632s, 94.056/s).
+[Fri Sep 23 22:05:13 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:13 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:13 2016] [debug] 101 Switching Protocols (0.000769s, 1300.390/s).
+[Fri Sep 23 22:05:20 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:05:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:20 2016] [debug] 101 Switching Protocols (0.024611s, 40.632/s).
+[Fri Sep 23 22:05:20 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:05:20 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:05:20 2016] [debug] 200 OK (0.049037s, 20.393/s).
+[Fri Sep 23 22:05:20 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:20 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:20 2016] [debug] 101 Switching Protocols (0.000880s, 1136.364/s).
+[Fri Sep 23 22:05:26 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:05:26 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:26 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:26 2016] [debug] 101 Switching Protocols (0.030381s, 32.915/s).
+[Fri Sep 23 22:05:41 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:05:41 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:41 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:41 2016] [debug] 101 Switching Protocols (0.000496s, 2016.129/s).
+[Fri Sep 23 22:05:45 2016] [debug] GET "/misc/schwarzschild".
+[Fri Sep 23 22:05:45 2016] [debug] Routing to controller "WebApp::Misc" and action "schwarzschild".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "misc/schwarzschild.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:05:45 2016] [debug] 200 OK (0.057359s, 17.434/s).
+[Fri Sep 23 22:05:48 2016] [debug] GET "/misc/calculate_schwarzschild_radius/50".
+[Fri Sep 23 22:05:48 2016] [debug] Routing to controller "WebApp::Misc" and action "calculate_schwarzschild_radius".
+[Fri Sep 23 22:05:48 2016] [debug] 200 OK (0.002033s, 491.884/s).
+[Fri Sep 23 22:05:52 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:05:52 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:05:52 2016] [debug] 200 OK (0.034123s, 29.306/s).
+[Fri Sep 23 22:05:52 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:05:52 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:05:52 2016] [debug] 101 Switching Protocols (0.000338s, 2958.580/s).
+[Fri Sep 23 22:06:07 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:06:07 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:07 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:07 2016] [debug] 101 Switching Protocols (0.000518s, 1930.502/s).
+[Fri Sep 23 22:06:11 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:06:11 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:11 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:11 2016] [debug] 101 Switching Protocols (0.053194s, 18.799/s).
+[Fri Sep 23 22:06:12 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:06:12 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:06:12 2016] [debug] 200 OK (0.044424s, 22.510/s).
+[Fri Sep 23 22:06:12 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:12 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:12 2016] [debug] 101 Switching Protocols (0.000621s, 1610.306/s).
+[Fri Sep 23 22:06:18 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:06:18 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:18 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:18 2016] [debug] 101 Switching Protocols (0.024764s, 40.381/s).
+[Fri Sep 23 22:06:18 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:06:18 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:06:18 2016] [debug] 200 OK (0.037441s, 26.709/s).
+[Fri Sep 23 22:06:19 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:19 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:19 2016] [debug] 101 Switching Protocols (0.000855s, 1169.591/s).
+[Fri Sep 23 22:06:27 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:06:27 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:27 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:27 2016] [debug] 101 Switching Protocols (0.023905s, 41.832/s).
+[Fri Sep 23 22:06:31 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:06:31 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:31 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:31 2016] [debug] 101 Switching Protocols (0.025821s, 38.728/s).
+[Fri Sep 23 22:06:31 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:06:31 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:06:31 2016] [debug] 200 OK (0.048720s, 20.525/s).
+[Fri Sep 23 22:06:32 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:32 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:32 2016] [debug] 101 Switching Protocols (0.000689s, 1451.379/s).
+[Fri Sep 23 22:06:42 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:06:42 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering cached template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering cached template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering cached template "layouts/head.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering cached template "layouts/header.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering cached template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering cached template "layouts/navbar.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering cached template "layouts/body.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:06:42 2016] [debug] 200 OK (0.011443s, 87.390/s).
+[Fri Sep 23 22:06:43 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:43 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:43 2016] [debug] 101 Switching Protocols (0.000646s, 1547.988/s).
+[Fri Sep 23 22:06:43 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:06:43 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:43 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:43 2016] [debug] 101 Switching Protocols (0.024225s, 41.280/s).
+[Fri Sep 23 22:06:44 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:06:44 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:06:44 2016] [debug] 200 OK (0.039196s, 25.513/s).
+[Fri Sep 23 22:06:45 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:45 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:45 2016] [debug] 101 Switching Protocols (0.000615s, 1626.016/s).
+[Fri Sep 23 22:06:50 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:06:50 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:50 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:50 2016] [debug] 101 Switching Protocols (0.031033s, 32.224/s).
+[Fri Sep 23 22:06:55 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:06:55 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:55 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:55 2016] [debug] 101 Switching Protocols (0.026217s, 38.143/s).
+[Fri Sep 23 22:06:56 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:06:56 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:06:56 2016] [debug] 200 OK (0.046048s, 21.716/s).
+[Fri Sep 23 22:06:56 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:06:56 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:06:56 2016] [debug] 101 Switching Protocols (0.000852s, 1173.709/s).
+[Fri Sep 23 22:07:02 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:07:02 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:07:02 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:07:02 2016] [debug] 101 Switching Protocols (0.024252s, 41.234/s).
+[Fri Sep 23 22:07:02 2016] [debug] GET "/chess/vsstockfish".
+[Fri Sep 23 22:07:02 2016] [debug] Routing to controller "WebApp::Chess" and action "vsstockfish".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "chess/vsstockfish.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "layouts/dashboard.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "layouts/head.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "layouts/header.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "layouts/sidebar.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "layouts/navbar.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "layouts/body.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] Rendering template "layouts/footer.html.ep".
+[Fri Sep 23 22:07:02 2016] [debug] 200 OK (0.051983s, 19.237/s).
+[Fri Sep 23 22:07:03 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:07:03 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:07:03 2016] [debug] 101 Switching Protocols (0.000617s, 1620.746/s).
+[Fri Sep 23 22:07:18 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:07:18 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:07:18 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:07:18 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
+[Fri Sep 23 22:07:19 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:07:19 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:07:19 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:07:19 2016] [debug] 101 Switching Protocols (0.023741s, 42.121/s).
+[Fri Sep 23 22:07:21 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:07:21 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:07:21 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:07:21 2016] [debug] 101 Switching Protocols (0.023871s, 41.892/s).
+[Fri Sep 23 22:07:22 2016] [debug] Your secret passphrase needs to be changed!!!
+[Fri Sep 23 22:07:22 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:07:22 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:07:22 2016] [debug] 101 Switching Protocols (0.023916s, 41.813/s).
+[Fri Sep 23 22:07:37 2016] [debug] Inactivity timeout.
+[Fri Sep 23 22:07:37 2016] [debug] GET "/chess/vsstockfish/ws".
+[Fri Sep 23 22:07:37 2016] [debug] Routing to controller "WebApp::Chess" and action "ws".
+[Fri Sep 23 22:07:37 2016] [debug] 101 Switching Protocols (0.000525s, 1904.762/s).
