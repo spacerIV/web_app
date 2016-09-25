@@ -1,0 +1,14 @@
+[Event "Giuoco Piano: Muten-Roshi-Chess-Turtle-Cup - Round 1"]
+[Site "Chess.com"]
+[Date "2016.09.14"]
+[White "SpacerIV"]
+[Black "Gmunzz5"]
+[Result "1-0"]
+[WhiteElo "1338"]
+[BlackElo "1408"]
+[TimeControl "1 in 3 days"]
+[Termination "SpacerIV won by checkmate"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6 6.f4 Bg7 7.e5 dxe5 8.fxe5 Ng4 9.Bb5+ Nc6 10.Nxc6 Qxd1+
+ 11.Nxd1 bxc6 12.Bxc6+ Kd8 13.Bxa8 Ba6 14.Nc3 Kc7 15.Nd5+ Kb8 16.Bc6 e6 17.Nb4 Bc4 18.b3 Bxe5 19.Rb1 Bc3+ 20.Bd2 Bxd2+
+ 21.Kxd2 Rd8+ 22.Ke1 Ne3 23.bxc4 Nxg2+ 24.Kf1 Ne3+ 25.Ke2 Nxc4 26.Na6+ Kc8 27.Rb8# 1-0
