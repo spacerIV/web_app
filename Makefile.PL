@@ -24,6 +24,10 @@ WriteMakefile(
       'JSON'                                 => 0,
       'IPC::Run3'                            => 0,
       'Expect'                               => 0,
+      'IO::Tty'                              => 0,
+      'IO::Stty'                             => 0,
+      'POSIX'                                => 0,
+      'Fcntl'                                => 0,
   },
   test      => {TESTS => 't/*.t'}
 );
