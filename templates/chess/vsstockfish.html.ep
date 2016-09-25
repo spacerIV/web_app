@@ -100,8 +100,8 @@
       $('#io').append(point.data + '\n'); 
       $('#io').scrollTop($('#io')[0].scrollHeight);
 
-      var myRegExp = / (\w\d\w\d) ponder \w\d\w\d/;
-      var match = myRegExp.exec(point.data);
+      var myRegExpPonder = / (\w\d\w\d) ponder \w\d\w\d/;
+      var match = myRegExpPonder.exec(point.data);
       if (match != null && match[1].length === 4) {
         var from = match[1].substring(0,2);
         var to   = match[1].substring(2,5);
@@ -111,6 +111,20 @@
         game.move(object_literal); 
         board.position(game.fen());
         $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
+        return;
+      }
+      var myRegExpBestmove = / (\w\d\w\d)/;
+      var match = myRegExpBestmove.exec(point.data);
+      if (match != null && match[1].length === 4) {
+        var from = match[1].substring(0,2);
+        var to   = match[1].substring(2,5);
+        console.log('FROM: ' + from + ' TO: ' + to);
+        var object_literal = { from: from, to: to  }; 
+        console.log(object_literal);
+        game.move(object_literal); 
+        board.position(game.fen());
+        $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
+        return;
       }
     };
 

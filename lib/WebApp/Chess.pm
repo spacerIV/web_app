@@ -9,7 +9,12 @@ use Expect;
 use IPC::Run3;
 use Data::Dumper; 
 
-my $stockfish = Expect->spawn("bin/stockfish-7-64.linux") 
+my $os = $^O;
+my $stockfish_binary = $os eq 'darwin' ? 'bin/stockfish-7-64.mac' : 'bin/stockfish-7-64.linux';
+
+my $pgn_extract_binary = $os eq 'darwin' ? 'bin/pgn-extract.mac' : 'bin/pgn-extract.linux';
+
+my $stockfish = Expect->spawn($stockfish_binary) 
     or die "Couldnt start stockfish.";
 
 has sf => sub { $stockfish };
@@ -124,7 +129,7 @@ sub pgn_extract {
     $pgn .= ' 1-0';
 
     my (@cmd, $in, $out, $err);
-    @cmd = qw{bin/pgn-extract -s -Wlalg -nochecks --nomovenumbers}; 
+    @cmd = ($pgn_extract_binary, '-s', '-Wlalg', '--nomovenumbers'); 
     $in = $pgn;
     warn "Running command @cmd $pgn";
     run3 \@cmd, \$in, \$out, \$err;
