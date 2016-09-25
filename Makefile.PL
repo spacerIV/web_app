@@ -22,8 +22,7 @@ WriteMakefile(
       'HTML::Entities'                       => 0,
       'Astro::Constants'                     => 0,
       'JSON'                                 => 0,
-      'IO::Async::Process'                   => 0,
-      'IO::Async::Loop'                      => 0,
+      'IPC::Run3'                            => 0,
   },
   test      => {TESTS => 't/*.t'}
 );
