@@ -8,7 +8,6 @@ use JSON;
 use Expect; 
 use IPC::Run3;
 use Data::Dumper; 
-use Chess::PGN::Extract; 
 
 my $stockfish = Expect->spawn("bin/stockfish-7-64") 
     or die "Couldnt start stockfish.";

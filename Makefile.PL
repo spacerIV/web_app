@@ -23,6 +23,7 @@ WriteMakefile(
       'Astro::Constants'                     => 0,
       'JSON'                                 => 0,
       'IPC::Run3'                            => 0,
+      'Expect'                               => 0,
   },
   test      => {TESTS => 't/*.t'}
 );
