@@ -9,7 +9,7 @@ use Expect;
 use IPC::Run3;
 use Data::Dumper; 
 
-my $stockfish = Expect->spawn("bin/stockfish-7-64") 
+my $stockfish = Expect->spawn("bin/stockfish-7-64.linux") 
     or die "Couldnt start stockfish.";
 
 has sf => sub { $stockfish };
