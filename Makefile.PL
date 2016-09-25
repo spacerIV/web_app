@@ -28,6 +28,11 @@ WriteMakefile(
       'IO::Stty'                             => 0,
       'POSIX'                                => 0,
       'Fcntl'                                => 0,
+      'Hash::AsObject'                       => 0,
+      'JSON::MaybeXS'                        => 0,
+      'LWP::Simple'                          => 0,
+      'Moo'                                  => 0,
+      'XML::Simple'                          => 0,
   },
   test      => {TESTS => 't/*.t'}
 );
