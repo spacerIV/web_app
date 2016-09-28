@@ -10,9 +10,8 @@ use IPC::Run3;
 use Data::Dumper; 
 
 my $os = $^O;
-my $stockfish_binary = $os eq 'darwin' ? 'bin/stockfish-7-64.mac' : 'bin/stockfish-7-64.linux';
-
-my $pgn_extract_binary = $os eq 'darwin' ? 'bin/pgn-extract.mac' : 'bin/pgn-extract.linux';
+my $stockfish_binary   = $os eq 'darwin' ? 'bin/stockfish-7-64.mac' : 'bin/stockfish-7-64.linux';
+my $pgn_extract_binary = $os eq 'darwin' ? 'bin/pgn-extract.mac'    : 'bin/pgn-extract.linux';
 
 my $stockfish = Expect->spawn($stockfish_binary) 
     or die "Couldnt start stockfish.";
@@ -22,7 +21,7 @@ has sf => sub { $stockfish };
 sub paste {
     my $self = shift;
 
-    $self->render( title => 'Chess Paste',
+    $self->render( 
         title => 'Chess Paste',
         msg   => 'Paste', 
         icon  => '<b style="font-size:100%;">&#9812;</b>',
@@ -63,8 +62,7 @@ sub ws {
             $ws->send({ json => {data => 'Connection Established!'} });
         }
         if ($data =~ /^uci - (.*)/) {
-            $ws->send({ json => {data => $1} });
-            my @out = $self->stockfish($1);
+            my @out = $self->stockfish($ws, $1);
             foreach (@out) {
                 next unless defined;
                 $ws->send({ json => {data => "$_"} });
@@ -74,21 +72,21 @@ sub ws {
 }
 
 sub stockfish {
-    my ($self, $str) = @_;
+    my ($self, $ws, $str) = @_;
 
     my $sf = $self->sf;
 
     if ($str eq 'uci') {
-        print $sf "$str\n";
+        say $sf "$str";
         my @out;
         unless (@out = $sf->expect(2, "uciok")) {
-            print 'not uciof';
+            warn 'not uciof';
         }
         my @lines = split( "\n", $out[3] ); 
         return (@lines, $out[2]);
     }  
     elsif ($str eq 'isready') {
-        print $sf "$str\n";
+        say $sf "$str";
         my @out;
         unless (@out = $sf->expect(2, "readyok")) {
             warn 'not readyok';
@@ -97,13 +95,13 @@ sub stockfish {
         return (@lines, $out[2]);
     }
     elsif ($str eq 'ucinewgame') {
-        print $sf "$str\n";
-        return ($str);
+        say $sf "$str";
+        return ();
     }
     elsif ($str =~ /position/) {
         my $pgn = $self->pgn_extract($str); 
-        print $sf "position startpos moves $pgn\n";
-        print $sf "go movetime 4\n";
+        say $sf "position startpos moves $pgn";
+        say $sf "go movetime 4";
         my @out;
         unless (@out = $sf->expect(3, "bestmove")) {
             warn 'not bestmove';
@@ -112,7 +110,7 @@ sub stockfish {
         return (@lines, $out[2], $out[4]);
     }
     elsif ($str =~ /^go movetime/) {
-        print $sf "$str\n";
+        say $sf "$str";
         my @out;
         unless (@out = $sf->expect(6, "bestmove")) {
             warn 'not bestmove';
@@ -131,7 +129,6 @@ sub pgn_extract {
     my (@cmd, $in, $out, $err);
     @cmd = ($pgn_extract_binary, '-s', '-Wlalg', '--nomovenumbers'); 
     $in = $pgn;
-    warn "Running command @cmd $pgn";
     run3 \@cmd, \$in, \$out, \$err;
     my @out = split '\n', $out;
     my @ret;
@@ -141,7 +138,6 @@ sub pgn_extract {
     my $return = join " ", @ret;
     $return =~ s/ 1-0$//;
     $return =~ s/\+//g;   # --nochecks doesnt seem to work.
-    warn "Got back: $return";
 
     return $return;
 };
