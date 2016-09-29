@@ -134,6 +134,7 @@
       var match = myRegExpCp.exec(point.data + '\n');
       if (match != null) {
           centipawn = match[1];
+          centipawn = centipawn * -1;
           // console.log('CENTIPWN: ' + centipawn);
           var percent = (centipawn-(-1200))*100/(1200-(-1200));
           perc = Math.round(percent);
