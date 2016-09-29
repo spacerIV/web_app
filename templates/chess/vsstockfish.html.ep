@@ -85,7 +85,7 @@
       option_contempt    = $("#slider_contempt_val").text();
       option_skill       = $("#slider_skill_val").text();
       sendMessage(JSON.stringify('uci - setoption name Threads value ' + option_threads));
-      sendMessage(JSON.stringify('uci - setoption name Hash value ' + option_hash));
+      //sendMessage(JSON.stringify('uci - setoption name Hash value ' + option_hash));
       sendMessage(JSON.stringify('uci - setoption name Contempt value ' + option_contempt));
       sendMessage(JSON.stringify('uci - setoption name Skill Level value ' + option_skill));
       sendMessage(JSON.stringify('uci - ucinewgame'));
