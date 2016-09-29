@@ -94,6 +94,11 @@ sub stockfish {
         my @lines = split( "\n", $out[3] ); 
         return (@lines, $out[2]);
     }
+    elsif ($str =~ /setoption/) {
+        warn $str;
+        say $sf $str;
+        return ();
+    }
     elsif ($str eq 'ucinewgame') {
         say $sf "$str";
         return ();

@@ -14,7 +14,8 @@
 <script>
 
   var board, game = new Chess();
-  var p;
+  var perc;
+  var firstmove = 1;
   var centipawn;
   var sparkline_chart;
   var sparkline_options = {
@@ -23,24 +24,13 @@
         width: "410px",
         height: "100px",
         barWidth: 10,
-
-
-        //type: "line" ,
-        //spotRadius: "3" ,
-        //highlightSpotColor: "#f39c12" ,
-        //highlightLineColor: "#222" ,
-        //minSpotColor: "#f56954" ,
-        //maxSpotColor: "#00a65a" ,
-        //spotColor: "#39CCCC" ,
-        //offset: "90" ,
-        //width: "100%" ,
-        //height: "100px" ,
-        //lineWidth: "2" ,
-        //lineColor: "#39CCCC" ,
-        //fillColor: "rgba(57, 204, 204, 0.08)"
   };
-
   var sparkline_data = [];
+
+  var option_threads;
+  var option_hash;
+  var option_contempt;
+  var option_skill;
 
   // do not pick up pieces if the game is over only pick up pieces for White
   var onDragStart = function(source, piece, position, orientation) {
@@ -85,6 +75,18 @@
   var onSnapEnd = function() {
     board.position(game.fen());
     //ws.send(JSON.stringify(game.fen()));
+    if (firstmove === 1) {
+      firstmove = 0;
+      option_threads     = $("#slider_threads_val").text();
+      option_hash        = $("#slider_hash_val").text();
+      option_contempt    = $("#slider_contempt_val").text();
+      option_skill       = $("#slider_skill_val").text();
+      sendMessage(JSON.stringify('uci - setoption name Threads value ' + option_threads));
+      sendMessage(JSON.stringify('uci - setoption name Hash value ' + option_hash));
+      sendMessage(JSON.stringify('uci - setoption name Contempt value ' + option_contempt));
+      sendMessage(JSON.stringify('uci - setoption name Skill Level value ' + option_skill));
+      sendMessage(JSON.stringify('uci - ucinewgame'));
+    }
     sendMessage(JSON.stringify('uci - position - ' + game.pgn()));
   };
 
@@ -102,6 +104,9 @@
 
     setupWebSocket(1);
     setupStockfish();
+
+    $("#progressbar").progressbar("value");
+
   }
 
   $(document).ready(init);
@@ -109,7 +114,6 @@
   function setupStockfish() {
       sendMessage(JSON.stringify('uci - uci'));
       sendMessage(JSON.stringify('uci - isready'));
-      sendMessage(JSON.stringify('uci - ucinewgame'));
   }
 
   function setupWebSocket(firsttime){
@@ -148,15 +152,15 @@
         game.move(object_literal); 
         board.position(game.fen());
         $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
+        $('#pgn').scrollTop($('#pgn')[0].scrollHeight);
         // update centipawn progressbar
-        //console.log('PERC: ' + perc);
+        console.log('PERC: ' + perc);
         $(".progress-bar-centipawn").animate({
           height: perc
         }, 200);
         // add to sparkline
         console.log('CENTIPWN: ' + centipawn);
         sparkline_data.push(centipawn); 
-        //console.log('sparkline_data: ' + sparkline_data);
         $('#sparkline_chart').sparkline(sparkline_data, sparkline_options);
         return;
       }
@@ -169,14 +173,15 @@
         game.move(object_literal); 
         board.position(game.fen());
         $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
-          //console.log('PERC: ' + perc);
-          $(".progress-bar-centipawn").animate({
+        $('#pgn').scrollTop($('#pgn')[0].scrollHeight);
+        // update centipawn progressbar
+        console.log('PERC: ' + perc);
+        $(".progress-bar-centipawn").animate({
             height: perc
-          }, 100);
+        }, 100);
         // add to sparkline
         console.log('CENTIPWN: ' + centipawn);
         sparkline_data.push(centipawn); 
-        //console.log('sparkline_data: ' + sparkline_data);
         $('#sparkline_chart').sparkline(sparkline_data, sparkline_options);
         return;
       }
@@ -276,39 +281,39 @@
           <div class="box box-default">
             <div class="box-body">
 
-              <p><span>Threads : <span id="slider1val">2</span><center><input id="slider1" style="width: 85% !important; background: green;" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="2"/></center></span></p>
+              <p><span>Threads : <span id="slider_threads_val">2</span><center><input id="slider_threads" style="width: 85% !important; background: green;" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="2"/></center></span></p>
 
               <br>
           
-              <p>Hash (MB) : <span id="slider2val">2048</span><center><input id="slider2" style="width: 85% !important; background: green;" type="text" data-slider-min="1" data-slider-max="4096" data-slider-step="1" data-slider-value="2048"/></center></span> </p>
+              <p>Hash (MB) : <span id="slider_hash_val">2048</span><center><input id="slider_hash" style="width: 85% !important; background: green;" type="text" data-slider-min="1" data-slider-max="4096" data-slider-step="1" data-slider-value="2048"/></center></span> </p>
 
               <br>
           
-              <p>Contempt : <span id="slider3val">0</span><center><input id="slider3" style="width: 85% !important; background: green;" type="text" data-slider-min="-100" data-slider-max="100" data-slider-step="1" data-slider-value="0"/></center></span> </p>
+              <p>Contempt : <span id="slider_contempt_val">0</span><center><input id="slider_contempt" style="width: 85% !important; background: green;" type="text" data-slider-min="-100" data-slider-max="100" data-slider-step="1" data-slider-value="0"/></center></span> </p>
 
               <br>
           
-              <p>Skill : <span id="slider4val">10</span><center><input id="slider4" style="width: 85% !important; background: green;" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="10"/></center></span> </p>
+              <p>Skill : <span id="slider_skill_val">10</span><center><input id="slider_skill" style="width: 85% !important; background: green;" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="10"/></center></span> </p>
 
               <script>
-                  $("#slider1").slider();
-                  $("#slider1").on("slide", function(slideEvt) {
-                      $("#slider1val").text(slideEvt.value);
+                  $("#slider_threads").slider();
+                  $("#slider_threads").on("slide", function(slideEvt) {
+                      $("#slider_threads_val").text(slideEvt.value);
                   });
 
-                  $("#slider2").slider();
-                  $("#slider2").on("slide", function(slideEvt) {
-                      $("#slider2val").text(slideEvt.value);
+                  $("#slider_hash").slider();
+                  $("#slider_hash").on("slide", function(slideEvt) {
+                      $("#slider_hash_val").text(slideEvt.value);
                   });
 
-                  $("#slider3").slider();
-                  $("#slider3").on("slide", function(slideEvt) {
-                      $("#slider3val").text(slideEvt.value);
+                  $("#slider_contempt").slider();
+                  $("#slider_contempt").on("slide", function(slideEvt) {
+                      $("#slider_contempt_val").text(slideEvt.value);
                   });
 
-                  $("#slider4").slider();
-                  $("#slider4").on("slide", function(slideEvt) {
-                      $("#slider4val").text(slideEvt.value);
+                  $("#slider_skill").slider();
+                  $("#slider_skill").on("slide", function(slideEvt) {
+                      $("#slider_skill_val").text(slideEvt.value);
                   });
               </script>
               <style>
