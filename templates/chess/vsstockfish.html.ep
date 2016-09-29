@@ -101,7 +101,8 @@
       position: 'start',
       onDragStart: onDragStart,
       onDrop: onDrop,
-      onSnapEnd: onSnapEnd
+      onSnapEnd: onSnapEnd,
+      //pieceTheme: '/chessboardjs/img/chesspieces/minimalist/{piece}.png'
     };
 
     board = ChessBoard('board', cfg);
