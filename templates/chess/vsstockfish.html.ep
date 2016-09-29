@@ -9,14 +9,38 @@
 <script src="/dashboard/js/plugins/bootstrap-slider/bootstrap-slider.js"></script>
 <link rel="stylesheet" href="/dashboard/css/bootstrap-slider/slider.css" />
 
-<link rel="stylesheet" href="/dashboard/css/ionslider/ion.rangeSlider.css">
-<link rel="stylesheet" href="/dashboard/css/ionslider/ion.rangeSlider.skinNice.css">
-<script src="/dashboard/js/plugins/ionslider/ion.rangeSlider.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
 
 <script>
 
   var board, game = new Chess();
   var p;
+  var centipawn;
+  var sparkline_chart;
+  var sparkline_options = {
+        type: 'bar',
+        barColor: '#0000bf',
+        width: "410px",
+        height: "100px",
+        barWidth: 10,
+
+
+        //type: "line" ,
+        //spotRadius: "3" ,
+        //highlightSpotColor: "#f39c12" ,
+        //highlightLineColor: "#222" ,
+        //minSpotColor: "#f56954" ,
+        //maxSpotColor: "#00a65a" ,
+        //spotColor: "#39CCCC" ,
+        //offset: "90" ,
+        //width: "100%" ,
+        //height: "100px" ,
+        //lineWidth: "2" ,
+        //lineColor: "#39CCCC" ,
+        //fillColor: "rgba(57, 204, 204, 0.08)"
+  };
+
+  var sparkline_data = [];
 
   // do not pick up pieces if the game is over only pick up pieces for White
   var onDragStart = function(source, piece, position, orientation) {
@@ -102,16 +126,16 @@
       $('#io').scrollTop($('#io')[0].scrollHeight);
 
       // get centipawn advantage
-      var myRegExpCp = / cp (-?\d{1,3}) /;
+      var myRegExpCp = / cp (-?\d{1,4}) /;
       var match = myRegExpCp.exec(point.data + '\n');
       if (match != null) {
           centipawn = match[1];
-          console.log('CENTIPWN: ' + centipawn);
+          // console.log('CENTIPWN: ' + centipawn);
           var percent = (centipawn-(-1200))*100/(1200-(-1200));
-          p = Math.round(percent);
-          if (p > 100) { p = 100; }
-          if (p < 0) { p = 0; }
-          p = p + '%';
+          perc = Math.round(percent);
+          if (perc > 100) { perc = 100; }
+          if (perc < 0) { perc = 0; }
+          perc = perc + '%';
       }
 
       // move black peices
@@ -124,10 +148,16 @@
         game.move(object_literal); 
         board.position(game.fen());
         $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
-          console.log('PERC: ' + p);
-          $(".progress-bar-centipawn").animate({
-            height: p
-          }, 100);
+        // update centipawn progressbar
+        //console.log('PERC: ' + perc);
+        $(".progress-bar-centipawn").animate({
+          height: perc
+        }, 200);
+        // add to sparkline
+        console.log('CENTIPWN: ' + centipawn);
+        sparkline_data.push(centipawn); 
+        //console.log('sparkline_data: ' + sparkline_data);
+        $('#sparkline_chart').sparkline(sparkline_data, sparkline_options);
         return;
       }
       var myRegExpBestmove = /^ (\w\d\w\d)/;
@@ -139,10 +169,15 @@
         game.move(object_literal); 
         board.position(game.fen());
         $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
-          console.log('PERC: ' + p);
+          //console.log('PERC: ' + perc);
           $(".progress-bar-centipawn").animate({
-            height: p
+            height: perc
           }, 100);
+        // add to sparkline
+        console.log('CENTIPWN: ' + centipawn);
+        sparkline_data.push(centipawn); 
+        //console.log('sparkline_data: ' + sparkline_data);
+        $('#sparkline_chart').sparkline(sparkline_data, sparkline_options);
         return;
       }
     };
@@ -323,5 +358,18 @@
     </div>
     </div>
   </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-12">
+    <div class="box box-solid">
+      <div class="box-body text-center">
+        <div class="sparkline" id="sparkline_chart" data-type="line" data-spot-Radius="3" data-highlight-Spot-Color="#f39c12" data-highlight-Line-Color="#222" data-min-Spot-Color="#f56954" data-max-Spot-Color="#00a65a" data-spot-Color="#39CCCC" data-offset="90" data-width="100%" data-height="100px" data-line-Width="2" data-line-Color="#39CCCC" data-fill-Color="rgba(57, 204, 204, 0.08)">
+        </div>
+      </div> <!-- /.box-body -->
+    </div> <!-- /.box -->
+  </div> <!-- /.col -->
+
 </div>
 
