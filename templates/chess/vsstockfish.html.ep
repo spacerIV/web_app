@@ -15,15 +15,17 @@
 
   var board, game = new Chess();
   var perc;
-  var firstmove = 1;
+  var moves = 0;    // white is even
   var centipawn;
+  var eco, opening, variation;
+
   var sparkline_chart;
   var sparkline_options = {
         type: 'bar',
         barColor: '#0000bf',
         width: "410px",
         height: "100px",
-        barWidth: 10,
+        barWidth: 10
   };
   var sparkline_data = [];
 
@@ -31,6 +33,7 @@
   var option_hash;
   var option_contempt;
   var option_skill;
+
 
   // do not pick up pieces if the game is over only pick up pieces for White
   var onDragStart = function(source, piece, position, orientation) {
@@ -54,6 +57,7 @@
     board.position(game.fen());
     $('#pgn').val(game.pgn({ max_width: 5, newline_char: '\n' })); 
     //sendMessage(JSON.stringify('uci - position - ' + game.pgn()));
+    moves++;
   };
   
   var onDrop = function(source, target) {
@@ -75,8 +79,7 @@
   var onSnapEnd = function() {
     board.position(game.fen());
     //ws.send(JSON.stringify(game.fen()));
-    if (firstmove === 1) {
-      firstmove = 0;
+    if (moves === 0) {
       option_threads     = $("#slider_threads_val").text();
       option_hash        = $("#slider_hash_val").text();
       option_contempt    = $("#slider_contempt_val").text();
@@ -88,6 +91,7 @@
       sendMessage(JSON.stringify('uci - ucinewgame'));
     }
     sendMessage(JSON.stringify('uci - position - ' + game.pgn()));
+    moves++;
   };
 
   var init = function() {
@@ -126,12 +130,19 @@
     ws.onmessage = function(e){
       
       var point = JSON.parse(e.data);
+
+      var myRegExpOpenings = /(ECO|Opening|Variation)/;
+      var match = myRegExpOpenings.exec(point.data);
+      if (match != null) {
+        console.log(match);
+      }
+
       $('#io').append(point.data + "\n"); 
       $('#io').scrollTop($('#io')[0].scrollHeight);
 
       // get centipawn advantage
       var myRegExpCp = / cp (-?\d{1,4}) /;
-      var match = myRegExpCp.exec(point.data + '\n');
+      var match = myRegExpCp.exec(point.data + '\n');  // <-- whats that newline doing there dude?
       if (match != null) {
           centipawn = match[1];
           centipawn = centipawn * -1;

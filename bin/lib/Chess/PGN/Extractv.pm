@@ -21,7 +21,7 @@ sub read_games {
   my %opts = @_;
   # TODO: add options to be passed to pgn-extract
 
-  my $proc = spawn ( 'pgn-extract', '-s', '-Wjson', $pgn );
+  my $proc = spawn ( 'pgn-extract.mac', '-s', '-Wjson', $pgn );
   my $out = do { local $/; $proc->stdout->getline };
   my @err = $proc->stderr->getlines;
   if (@err) {

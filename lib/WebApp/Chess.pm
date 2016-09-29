@@ -95,7 +95,6 @@ sub stockfish {
         return (@lines, $out[2]);
     }
     elsif ($str =~ /setoption/) {
-        warn $str;
         say $sf $str;
         return ();
     }
@@ -104,8 +103,11 @@ sub stockfish {
         return ();
     }
     elsif ($str =~ /position/) {
-        my $pgn = $self->pgn_extract($str); 
-        say $sf "position startpos moves $pgn";
+        my %extract = $self->pgn_extract($str); 
+        say $sf "position startpos moves " . $extract{pgn};
+        $ws->send({ json => { data => $extract{eco}}}) if defined $extract{eco};
+        $ws->send({ json => { data => $extract{opening}}}) if defined $extract{opening};
+        $ws->send({ json => { data => $extract{variation}}}) if defined $extract{variation};
         say $sf "go movetime 4";
         my @out;
         unless (@out = $sf->expect(3, "bestmove")) {
@@ -132,19 +134,28 @@ sub pgn_extract {
     $pgn .= ' 1-0';
 
     my (@cmd, $in, $out, $err);
-    @cmd = ($pgn_extract_binary, '-s', '-Wlalg', '--nomovenumbers'); 
+    @cmd = ($pgn_extract_binary, '-s', '-Wlalg', '-ebin/eco.pgn', '--nomovenumbers' ); 
     $in = $pgn;
     run3 \@cmd, \$in, \$out, \$err;
     my @out = split '\n', $out;
     my @ret;
-    foreach (@out) {
-        push @ret, $_ unless $_ =~ /^\[/;    
+    my ($opening, $variation, $eco);
+    foreach my $line (@out) {
+        $opening = $line if $line =~ /Opening/;
+        $variation = $line if $line =~ /Variation/;
+        $eco = $line if $line =~ /ECO/;
+        push @ret, $line unless $line =~ /^\[/;    
     }
     my $return = join " ", @ret;
     $return =~ s/ 1-0$//;
     $return =~ s/\+//g;   # --nochecks doesnt seem to work.
+    $return =~ s/\*//g;   
 
-    return $return;
+    my %r = (pgn      => $return, 
+            opening   => $opening, 
+            eco       => $eco, 
+            variation => $variation);
+    return %r;
 };
 
 
@@ -152,5 +163,6 @@ sub gen_data {
   my $x = shift;
   return [ $x, sin( $x + 2*rand() - 2*rand() ) ];
 }
+
 
 1;
