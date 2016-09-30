@@ -43,7 +43,7 @@ sub analyse {
 sub vsstockfish {
     my $self = shift;
 
-    $self->sf->log_stdout(0);
+    $self->sf->log_stdout(1);
 
     $self->render( 
         title      => 'vs Stockfish 7',

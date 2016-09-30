@@ -246,17 +246,17 @@
 <div class="row">
 
 
-  <div class="col-xs-5">
+  <div class="col-md-5">
     <div class="box box-primary">
       <div class="box-body">
 
         <div class="row">
 
-            <div class="col-xs-11">
+            <div class="col-md-11">
               <div id="board" style="width: 410px; height=300px;"></div>
             </div>
 
-            <div class="col-xs-1">
+            <div class="col-md-1">
 <style>
 .progress {background: rgba(0, 0, 0, 1); border: 0px solid rgba(245, 245, 245, 1); border-radius: 0px; height: 10px;}
 .progress-bar-centipawn {background: rgba(219, 219, 219, 1);}
@@ -275,7 +275,7 @@
     </div>
   </div>
 
-  <div class="col-xs-7">
+  <div class="col-md-7">
     <div class="box box-primary">
     <div class="box-body">
     <div class="nav-tabs-custom">
