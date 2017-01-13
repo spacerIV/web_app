@@ -25,3 +25,5 @@ requires 'JSON::MaybeXS'                        , 0;
 requires 'LWP::Simple'                          , 0;
 requires 'Moo'                                  , 0;
 requires 'XML::Simple'                          , 0;
+requires 'Mojolicious::Plugin::AccessLog'       , 0;
+requires 'LWP::Protocol::https'                 , 0;

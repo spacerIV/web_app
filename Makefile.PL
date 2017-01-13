@@ -33,6 +33,8 @@ WriteMakefile(
       'LWP::Simple'                          => 0,
       'Moo'                                  => 0,
       'XML::Simple'                          => 0,
+      'Mojolicious::Plugin::AccessLog'       => 0,
+      'LWP::Protocol::https'                 => 0,
   },
   test      => {TESTS => 't/*.t'}
 );

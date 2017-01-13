@@ -4,8 +4,13 @@ use Mojo::Base 'Mojolicious';
 sub startup {
     my $self = shift;
 
+    $self->plugin(AccessLog => {log => 'log/access.log'});
+
     # documentation browser under "/perldoc"
     $self->plugin( 'PODRenderer' );
+
+    # JSON config
+    my $config = $self->plugin('JSONConfig');
 
     # router
     my $r = $self->routes;
