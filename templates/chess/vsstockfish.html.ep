@@ -13,6 +13,11 @@
 
 <script>
 
+  $(window).unload(function(){
+    console.log('kill stockfish');
+    sendMessage(JSON.stringify('uci - kill'));
+  });
+
   var board, game = new Chess();
   var perc;
   var moves = 0;    // white is even

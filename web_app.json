@@ -1,7 +1,7 @@
 {
     "hypnotoad": {
         "listen":  ["http://*:32401"],
-        "workers": 10,
+        "workers": 2,
         "pid_file":  "/home/vic/github/web_app/hypnotoad.pid"
     }
 }

@@ -10,8 +10,12 @@ use IPC::Run3;
 use Data::Dumper; 
 
 my $os = $^O;
-my $stockfish_binary   = $os eq 'darwin' ? 'bin/stockfish-7-64.mac' : 'bin/stockfish-7-64.linux';
-my $pgn_extract_binary = $os eq 'darwin' ? 'bin/pgn-extract.mac'    : 'bin/pgn-extract.linux';
+#my $stockfish_binary   = $os eq 'darwin' ? 'bin/stockfish-7-64.mac' : 'bin/stockfish-7-64.linux';
+#my $pgn_extract_binary = $os eq 'darwin' ? 'bin/pgn-extract.mac'    : 'bin/pgn-extract.linux';
+
+# running on raspbery pi now
+my $stockfish_binary   = '/usr/games/stockfish';
+my $pgn_extract_binary = 'bin/pgn-extract.arm';
 
 my $stockfish = Expect->spawn($stockfish_binary) 
     or die "Couldnt start stockfish.";
@@ -124,6 +128,11 @@ sub stockfish {
         }
         my @lines = split( "\n", $out[3] ); 
         return (@lines, $out[2], $out[4]);
+    }  
+    elsif ($str =~/kill/) {
+        say $sf $str;
+        warn "vic killed it";
+        return ();
     }
 }
 
