@@ -23,7 +23,7 @@ sub startup {
     $r->post( '/login' )->name( 'do_login' )->to( 'Login#on_user_login' );
 
     # chess paste
-    $r->route( '/chess/paste' )->to( 'chess#paste' );
+    $r->route( '/chess/opening_book' )->to( 'chess#opening_book' );
 
     # chess analyse
     $r->route( '/chess/analyse' )->to( 'chess#analyse' );

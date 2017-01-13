@@ -1,0 +1,297 @@
+% layout 'dashboard';
+
+% title 'Opening Book';
+
+<!-- chess.js and chessboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.js"></script>
+<script src="/chessboardjs/js/chessboard-0.3.0.js"></script>
+<link rel="stylesheet" href="/chessboardjs/css/chessboard-0.3.0.css" />
+
+<!-- bootstrap treeview -->
+<link href="/bootstrap-treeview/css/bootstrap-treeview.css" rel="stylesheet">
+<script src="/bootstrap-treeview/js/bootstrap-treeview.js"></script>
+
+<script>
+
+  var board, game = new Chess();
+
+  var init = function() {
+
+    var cfg = {
+      draggable: true,
+      position: 'start',
+      //onDragStart: onDragStart,
+      //onDrop: onDrop,
+      //onSnapEnd: onSnapEnd,
+    };
+
+    board = ChessBoard('board', cfg);
+
+    // tree views
+    $('#treeA').treeview({data: getTreeA()});
+    $('#treeB').treeview({data: getTreeB()});
+    $('#treeC').treeview({data: getTreeB()});
+    $('#treeD').treeview({data: getTreeB()});
+    $('#treeE').treeview({data: getTreeB()});
+
+    $('#treeA').treeview('collapseAll', { silent: true });
+    $('#treeB').treeview('collapseAll', { silent: true });
+    $('#treeC').treeview('collapseAll', { silent: true });
+    $('#treeD').treeview('collapseAll', { silent: true });
+    $('#treeE').treeview('collapseAll', { silent: true });
+
+  }
+
+  $(document).ready(init);
+
+  function getTreeA() {
+    var tree = [
+        {
+          "text": "A00-A39 White first moves other than 1.e4, 1.d4",
+          "nodes": [
+            { "text": "A00 Irregular Openings",
+              "nodes": [
+                { "text": "Polish (Sokolsky) opening",
+                    "pgn": "1. b4"  },
+                { "text": "Polish - Tuebingen variation" },
+                    "pgn": "1. b4 Nh6"  },
+                { "text": "Polish - Outflank variation" },
+                    "pgn": ""  },
+                { "text": "Benko's opening" },
+                    "pgn": ""  },
+                { "text": "Benko's opening" },
+                { "text": "Lasker simul special" },
+                { "text": "Grob's attack" },
+                { "text": "Grob" },
+                { "text": "Grob" },
+                { "text": "Grob" },
+                { "text": "Clemenz (Mead's }, Basman's or de Klerk's) opening" },
+                { "text": "Global opening" },
+                { "text": "Amar (Paris) opening" },
+                { "text": "Amar gambit" },
+                { "text": "Dunst (Sleipner }, Heinrichsen) opening" },
+                { "text": "Dunst (Sleipner }, Heinrichsen) opening" },
+                { "text": "Battambang opening" },
+                { "text": "Novosibirsk opening" },
+                { "text": "Anderssen's opening" },
+                { "text": "Ware (Meadow Hay) opening" },
+                { "text": "Crab opening" },
+                { "text": "Saragossa opening" },
+                { "text": "Mieses opening" },
+                { "text": "Mieses opening" },
+                { "text": "Valencia opening" },
+                { "text": "Venezolana opening" },
+                { "text": "Van't Kruijs opening" },
+                { "text": "Amsterdam attack" },
+                { "text": "Gedult's opening" },
+                { "text": "Hammerschlag (Fried fox/Pork chop opening)" },
+                { "text": "Anti-Borg (Desprez) opening" },
+                { "text": "Durkin's attack" }
+              ]
+            }
+          ]
+         }
+    ];
+
+    return tree;
+
+  }
+
+  function getTreeB() {
+    var tree = [
+      {
+        text: "Parent 1",
+        nodes: [
+          {
+            text: "Child 1",
+            nodes: [
+              {
+                text: "Grandchild 1"
+              },
+              {
+                text: "Grandchild 2"
+              }
+            ]
+          },
+          {
+            text: "Child 2"
+          }
+        ]
+      },
+      {
+        text: "Parent 2"
+      },
+      {
+        text: "Parent 3"
+      },
+      {
+        text: "Parent 4"
+      },
+      {
+        text: "Parent 5",
+        nodes: [
+          {
+            text: "Child 1",
+            nodes: [
+              {
+                text: "Grandchild 1"
+              },
+              {
+                text: "Grandchild 2"
+              }
+            ]
+          },
+          {
+            text: "Child 2"
+          }
+        ]
+      },
+      {
+        text: "Parent 6",
+        nodes: [
+          {
+            text: "Child 1",
+            nodes: [
+              {
+                text: "Grandchild 1"
+              },
+              {
+                text: "Grandchild 2"
+              }
+            ]
+          },
+          {
+            text: "Child 2"
+          }
+        ]
+      },
+      {
+        text: "Parent 7",
+        nodes: [
+          {
+            text: "Child 1",
+            nodes: [
+              {
+                text: "Grandchild 1"
+              },
+              {
+                text: "Grandchild 2"
+              }
+            ]
+          },
+          {
+            text: "Child 2"
+          }
+        ]
+      }
+    ];
+    return tree;
+  }
+
+</script>
+
+
+<div class="row">
+
+  <div class="col-md-5">
+    <div class="box box-solid">
+      <div class="box-body">
+          <div id="board" style="width: 450px; height=300px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-7">
+
+          <div class="box box-solid">
+            <div class="box-body">
+              <div class="box-group" id="accordion">
+                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+
+                <div class="panel box box-primary">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseA">
+                         Volume A: Flank Openings
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseA" class="panel-collapse collapse in">
+                    <div class="box-body">
+                      <div id="treeA"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel box box-danger">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseB">
+                        Volume B:  Semi-Open Games other than the French Defense 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseB" class="panel-collapse collapse">
+                    <div class="box-body">
+                      <div id="treeB"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel box box-success">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseC">
+                        Volume C: Open Games and the French Defense 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseC" class="panel-collapse collapse">
+                    <div class="box-body">
+                      <div id="treeC"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel box box-default">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseD">
+                        Volume D: Closed Games and Semi-Closed Games 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseD" class="panel-collapse collapse">
+                    <div class="box-body">
+                      <div id="treeD"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel box box-warning">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseE">
+                        Volume E: Indian Defenses 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseE" class="panel-collapse collapse">
+                    <div class="box-body">
+                      <div id="treeE"></div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+
+
+
+
+  </div>
+</div>
+

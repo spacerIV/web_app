@@ -14,8 +14,8 @@
 % if ( &url_for =~ /chess/ ) { 
                         <li><a href="#">chess</a></li>
 % } 
-% if ( &url_for =~ /chess\/paste/ ) { 
-                        <li><a href="#">paste</a></li>
+% if ( &url_for =~ /chess\/opening_book/ ) { 
+                        <li><a href="#">opening_book</a></li>
 % }
 % if ( &url_for =~ /chess\/analyse/ ) { 
                         <li><a href="#">analyse</a></li>
