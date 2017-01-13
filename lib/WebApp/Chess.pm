@@ -18,14 +18,14 @@ my $stockfish = Expect->spawn($stockfish_binary)
 
 has sf => sub { $stockfish };
 
-sub paste {
+sub opening_book {
     my $self = shift;
 
     $self->render( 
-        title => 'Chess Paste',
-        msg   => 'Paste', 
+        title => 'Opening Book',
+        msg   => 'Opening Book',
         icon  => '<b style="font-size:100%;">&#9812;</b>',
-        blurb => 'paste PGN to analyse',
+        blurb => 'Know your openings',
     );
 }
 
