@@ -3,7 +3,7 @@
     <head>
 %= include 'layouts/head'
     </head>
-    <body class="hold-transition skin-blue-light sidebar-mini">
+    <body class="hold-transition skin-blue sidebar-mini">
 %= include 'layouts/header'
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
