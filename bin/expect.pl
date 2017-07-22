@@ -14,7 +14,7 @@ my $command = Expect->spawn("stockfish-7-64")
 $command->log_stdout(0);
 
 # 1. got prompt
-unless ($command->expect(2, "Stockfish 7 64 by T")) {
+unless ($command->expect(2, "Stockfish 8 by T")) {
     say 'not';
     exit;
 }

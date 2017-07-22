@@ -91,8 +91,12 @@
       option_skill       = $("#slider_skill_val").text();
       sendMessage(JSON.stringify('uci - setoption name Threads value ' + option_threads));
       //sendMessage(JSON.stringify('uci - setoption name Hash value ' + option_hash));
+      //sendMessage(JSON.stringify('uci - setoption name Hash value 50'));
       sendMessage(JSON.stringify('uci - setoption name Contempt value ' + option_contempt));
       sendMessage(JSON.stringify('uci - setoption name Skill Level value ' + option_skill));
+      sendMessage(JSON.stringify('uci - setoption name Slow Mover value 15'));
+      sendMessage(JSON.stringify('uci - setoption name Ponder value ON'));
+      sendMessage(JSON.stringify('uci - setoption name Debug Log File value /home/vic/sf-debug.log'));
       sendMessage(JSON.stringify('uci - ucinewgame'));
     }
     sendMessage(JSON.stringify('uci - position - ' + game.pgn()));
@@ -250,37 +254,34 @@
 
 <div class="row">
 
+        <style>
+        .progress {background: rgba(0, 0, 0, 1); border: 0px solid rgba(245, 245, 245, 1); border-radius: 0px; height: 100px;}
+        .progress-bar-centipawn {background: rgba(219, 219, 219, 1);}
+        </style>
 
-  <div class="col-md-5">
+  <div class="col-md-5" id="columnOne">
     <div class="box box-solid">
       <div class="box-body">
-
-        <div class="row">
-
-            <div class="col-md-11">
-              <div id="board" style="width: 410px; height=300px;"></div>
-            </div>
-
-            <div class="col-md-1">
-<style>
-.progress {background: rgba(0, 0, 0, 1); border: 0px solid rgba(245, 245, 245, 1); border-radius: 0px; height: 10px;}
-.progress-bar-centipawn {background: rgba(219, 219, 219, 1);}
-</style>
-
-  <div class="progress vertical progress-xs" style="padding-right: 10px; height: 412px;">
-  <div class="progress-bar progress-bar-centipawn" role="progressbar" aria-valuenow="-500" aria-valuemin="-1500" aria-valuemax="1500" style="height: 50%">
-  </div>
-  </div>
-
-            </div>
-
-        </div>
-
+          <div id="board" style="width: 100%; height=100%; float: left"></div>
+<!--
+          <div class="progress vertical progress-xs" style="height: 100%; width: 100%">
+              <div class="progress-bar progress-bar-centipawn" role="progressbar" aria-valuenow="-500" aria-valuemin="-1500" aria-valuemax="1500"></div>
+          </div>
+-->
       </div>
     </div>
   </div>
 
-  <div class="col-md-7">
+<!--
+  <div class="col-md-1">
+    <div class="box box-solid">
+      <div class="box-body">
+        
+      </div>
+    </div>
+  </div>
+-->
+  <div class="col-md-7" id="columnTwo">
     <div class="box box-solid">
     <div class="box-body">
     <div class="nav-tabs-custom">
@@ -382,6 +383,7 @@
     </div>
   </div>
 </div>
+  <script>$("#columnTwo").height($("#columnOne").height());</script>
 
 <div class="row">
 

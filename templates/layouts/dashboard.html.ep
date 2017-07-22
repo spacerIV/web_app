@@ -2,6 +2,7 @@
 <html>
     <head>
 %= include 'layouts/head'
+%= include 'layouts/google-analytics'
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
 %= include 'layouts/header'

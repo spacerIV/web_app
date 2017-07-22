@@ -38,7 +38,7 @@
                             <ul class="treeview-menu">
                                 <li<% if ( &url_for =~ /chess\/opening_book/ ) { %> class="active" <% } %>><a href="/chess/opening_book"><i class="fa fa-angle-double-right"></i> Opening Book</a></li>
                                 <li<% if ( &url_for =~ /chess\/analyse/ ) { %> class="active" <% } %>><a href="/chess/analyse"><i class="fa fa-angle-double-right"></i> Analyse</a></li>
-                                <li<% if ( &url_for =~ /chess\/vsstockfish/ ) { %> class="active" <% } %>><a href="/chess/vsstockfish"><i class="fa fa-angle-double-right"></i> vs Stockfish 7</a></li>
+                                <li<% if ( &url_for =~ /chess\/vsstockfish/ ) { %> class="active" <% } %>><a href="/chess/vsstockfish"><i class="fa fa-angle-double-right"></i> vs Stockfish 8</a></li>
                             </ul>
                         </li>
 

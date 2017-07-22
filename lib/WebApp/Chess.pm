@@ -14,7 +14,8 @@ my $os = $^O;
 #my $pgn_extract_binary = $os eq 'darwin' ? 'bin/pgn-extract.mac'    : 'bin/pgn-extract.linux';
 
 # running on raspbery pi now
-my $stockfish_binary   = '/usr/games/stockfish';
+#my $stockfish_binary   = '/usr/games/stockfish';
+my $stockfish_binary   = '/home/vic/apps/stockfish-8-src/src/stockfish';
 my $pgn_extract_binary = 'bin/pgn-extract.arm';
 
 my $stockfish = Expect->spawn($stockfish_binary) 
@@ -50,9 +51,9 @@ sub vsstockfish {
     $self->sf->log_stdout(1);
 
     $self->render( 
-        title      => 'vs Stockfish 7',
+        title      => 'vs Stockfish 8',
         msg        => 'vs',
-        blurb      => 'Stockfish 7',
+        blurb      => 'Stockfish 8',
         icon       => '<b style="font-size:100%;">&#9812;</b>',
     );
 }
