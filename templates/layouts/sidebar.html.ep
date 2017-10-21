@@ -4,7 +4,7 @@
 
                 <section class="sidebar">
 
-                    <!-- search form -->
+                    <!-- search form 
 
                     <form action="#" method="get" class="sidebar-form">
                         <div class="input-group">
@@ -36,9 +36,11 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
+<!--
                                 <li<% if ( &url_for =~ /chess\/opening_book/ ) { %> class="active" <% } %>><a href="/chess/opening_book"><i class="fa fa-angle-double-right"></i> Opening Book</a></li>
                                 <li<% if ( &url_for =~ /chess\/analyse/ ) { %> class="active" <% } %>><a href="/chess/analyse"><i class="fa fa-angle-double-right"></i> Analyse</a></li>
-                                <li<% if ( &url_for =~ /chess\/vsstockfish/ ) { %> class="active" <% } %>><a href="/chess/vsstockfish"><i class="fa fa-angle-double-right"></i> vs Stockfish 8</a></li>
+-->
+                                <li<% if ( &url_for =~ /chess\/vsstockfish/ ) { %> class="active" <% } %>><a href="/chess/vsstockfish"><i class="fa fa-angle-double-right"></i> Play vs Stockfish 8</a></li>
                             </ul>
                         </li>
 
