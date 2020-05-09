@@ -15,6 +15,8 @@
 - production mode
 % hypnotoad script/web_app
 
+Notes on tetris:
 The tetris code is my first attempt at an opengl game in C many many years ago. 
+Original (terrible) C code is here: https://github.com/spacerIV/tetris
 I used Emscripten to port it to JS. 
 
