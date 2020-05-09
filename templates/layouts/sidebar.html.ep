@@ -54,7 +54,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li<% if ( &url_for =~ /maps\/weather/ ) { %> class="active" <% } %>><a href="/maps/weather"><i class="fa fa-angle-double-right"></i> Weather</a></li>
-                                <li<% if ( &url_for =~ /maps\/borisbikes/ ) { %> class="active" <% } %>><a href="/maps/borisbikes"><i class="fa fa-angle-double-right"></i> Boris Bikes</a></li>
+                                <li<% if ( &url_for =~ /maps\/borisbikes/ ) { %> class="active" <% } %>><a href="/maps/borisbikes"><i class="fa fa-angle-double-right"></i> London Bikes</a></li>
                             </ul>
                         </li>
 

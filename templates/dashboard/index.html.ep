@@ -11,5 +11,31 @@
 
         <center><img src="/img/underconstruction/luvsisqounderconstruction_rotating_triangle.gif"></center>
 
+
+<style>
+  @font-face {
+    font-family: 'arcadeclassic';
+    src: URL('fonts/arcadeclassic/ARCADECLASSIC.TTF') format('truetype');
+  }
+  span.counter {
+    display: inline-block;
+    padding: 6px 6px 4px;
+    border-radius: 3px;
+    background: #000000;
+    color: green;
+    margin-right: -2px;
+    font-family: arcadeclassic;
+    font-size: 55px;
+  }
+</style>
+
 <img style="position: absolute; right: 0px; bottom: 0px;" src="/img/underconstruction/best_viewed_with_ie_or_netscape.jpg">
 
+<div class="row">
+  <h3> Hit Counter: </h3>
+  <div class="col-md-12">
+    % foreach my $char (split //, $counter) {
+      <span class="counter"><%= $char %></span>
+    % } 
+  </div>
+</div>

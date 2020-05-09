@@ -9,7 +9,7 @@
 <script src="/dashboard/js/plugins/bootstrap-slider/bootstrap-slider.js"></script>
 <link rel="stylesheet" href="/dashboard/css/bootstrap-slider/slider.css" />
 
-<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 
 <script>
 
@@ -132,8 +132,9 @@
 
   function setupWebSocket(firsttime){
 
-    var url = '<%= url_for('chess/vsstockfish/ws')->to_abs %>';
-    url = url.replace('http','ws');
+    //var url = '<%= url_for('chess/vsstockfish/ws')->to_abs %>';
+    var url = 'wss://www.victorhouston.net/chess/vsstockfish/ws';
+    //url = url.replace('https','wss');
     ws = new WebSocket( url );
 
     // get from server

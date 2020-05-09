@@ -1,2 +1,0 @@
-#!/bin/sh
-./script/web_app daemon --listen http://*:$PORT --mode production

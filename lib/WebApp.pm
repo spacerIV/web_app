@@ -1,10 +1,15 @@
 package WebApp;
 use Mojo::Base 'Mojolicious';
 
+use Data::Dumper;
+
 sub startup {
     my $self = shift;
 
-    $self->plugin(AccessLog => {log => 'log/access.log'});
+    # reverse proxy
+    #$ENV{MOJO_REVERSE_PROXY} = 1;
+
+    $self->plugin(AccessLog => {log => 'log/access.log', format => 'combined'});
 
     # documentation browser under "/perldoc"
     $self->plugin( 'PODRenderer' );
@@ -32,6 +37,7 @@ sub startup {
     $r->route( '/chess/vsstockfish' )->to( 'chess#vsstockfish' );
 
     $r->websocket('/chess/vsstockfish/*ws')->to('chess#ws');
+    #$r->websocket('/chess/vsstockfish/ws')->to('chess#ws');
 
     # maps weather
     $r->route( '/maps/weather' )->to( 'maps#weather' );
