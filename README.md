@@ -9,14 +9,15 @@
 * London cycle hire map with docking station locations, number of bikes & available docks.
 
 
-- development mode:
+###### Starting
+development mode:
 % morbo -l http://*:[port]  script/web_app
 
-- production mode
+production mode
 % hypnotoad script/web_app
 
-Notes on tetris:
+###### Notes:
 The tetris code is my first attempt at an opengl game in C many many years ago. 
-Original (terrible) C code is here: https://github.com/spacerIV/tetris
+Original (terrible) C code is here: https://github.com/spacerIV/tetris.
 I used Emscripten to port it to JS. 
 
